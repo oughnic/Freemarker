@@ -1,21 +1,34 @@
 ﻿<#ftl output_format="JSON">
+
+<#---------------- -->
+<#-- Common macros -->
+<#-- ------------- -->
+
+<#-- List the classes related to an input class -->
+<#-- Input parameters -->
+<#-- dataClass - the source Mauro Data mapper class-->
 <#macro relatedClasses dataClass>
 <#if dataClass.dataElements??>
-// Classes related to ${dataClass.label} 
 <#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
 ${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.label}
 </#list>
 </#if>
 </#macro>
+
+<#-- Pull out the metadata value for a catalogueItem filtered by namespace and key, escape double quotes and trim any whitespace -->
 <#macro printMetadata catalogueItem, metaNamespace, metaKey >
 <#list catalogueItem.metadata?filter(p -> p.key == metaKey && p.namespace == metaNamespace) as meta>${meta.value?replace("\"","\\\"")?trim}</#list></#macro>
+
+<#-- List all the metadata for a catalogueItem-->
 <#macro dumpMetadata catalogueItem>
          <#list catalogueItem.metadata as metadata >
             ${metadata.namespace} - ${metadata.key} - ${metadata.value}
         </#list>
     </#macro>
-{
-    "nodes": [
+<#-- -------------------------- -->
+<#-- Start of the core template -->
+<#-- -------------------------- -->
+[
 <#list dataModel.dataClasses as class >
         {
             "id": "${class.label}",
@@ -25,5 +38,4 @@ ${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.la
             "resolution": "<@printMetadata class, "comments.iso.org", "ISO Comments/Proposed resolution" />"
         }<#sep>,
          </#sep></#list>
-       ]
-}
+]
