@@ -1,0 +1,519 @@
+﻿{
+    "count": 17,
+    "items": [
+        {
+            "id": "ec145ec6-b373-496e-bdae-5172917a30ce",
+            "domainType": "DataElement",
+            "label": "addresses",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+                "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "45765573-3d99-4579-89ff-7d064f3f76b8",
+                "domainType": "ReferenceType",
+                "label": "Reference to health thread",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "b3b4cf6f-df03-4de0-a171-8bacadd7e6ac",
+                    "domainType": "DataClass",
+                    "label": "health thread",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "description": "Nicholas Note - fourth example  required\n·      The health conditions included in a healthcare process.",
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "c3ce2a94-e806-48a2-bcbb-1af69aac1f10",
+            "domainType": "DataElement",
+            "label": "addresses health issue",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "d0241c55-d4c3-4796-aec0-e54f2afcf043",
+                "domainType": "ReferenceType",
+                "label": "Reference to health issue",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "8b252376-662e-45b2-8228-94b62b19863e",
+                    "domainType": "DataClass",
+                    "label": "health issue",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "ccf4aa3e-4845-4fcc-a84e-b0815bb77092",
+            "domainType": "DataElement",
+            "label": "applies",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "e2a2c8aa-a8db-4d92-b6d3-984c5906413c",
+                "domainType": "ReferenceType",
+                "label": "Reference to healthcare actor",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "d942566d-d0a6-478b-838c-6a04599262c1",
+                    "domainType": "DataClass",
+                    "label": "healthcare actor",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "6047c7bd-30b2-4171-92f1-0048eef1e8f2",
+            "domainType": "DataElement",
+            "label": "care plan",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "26e23c9d-be26-4f0d-b77b-579b768eefc1",
+                "domainType": "ReferenceType",
+                "label": "Reference to care plan",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "45304041-7ce0-4022-8200-d22141cb13ef",
+                    "domainType": "DataClass",
+                    "label": "individual care plan",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ]
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "ddb60996-6eeb-4ccf-b8ab-5f6b8bafdba2",
+            "domainType": "DataElement",
+            "label": "care plan care plan",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "26e23c9d-be26-4f0d-b77b-579b768eefc1",
+                "domainType": "ReferenceType",
+                "label": "Reference to care plan",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "45304041-7ce0-4022-8200-d22141cb13ef",
+                    "domainType": "DataClass",
+                    "label": "individual care plan",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ]
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "dd9dab9b-4151-45b7-8ff9-248edc5079a6",
+            "domainType": "DataElement",
+            "label": "changes statuses of  healthcare activities in",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "83aab2dd-be43-4add-912c-80f9925eedc6",
+                "domainType": "ReferenceType",
+                "label": "Reference to healthcare activity management",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "46878fc3-8255-494e-a122-581449129c9f",
+                    "domainType": "DataClass",
+                    "label": "healthcare activity management",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "minMultiplicity": 1
+        },
+        {
+            "id": "406d74e8-e32c-4f96-8cac-ccd8a71fe3c5",
+            "domainType": "DataElement",
+            "label": "complies with",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "da063a25-58c2-474a-a242-93912d029071",
+                "domainType": "ReferenceType",
+                "label": "Reference to clinical guideline",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "8bb5f1bd-8d3e-469e-a97b-f1581b76a982",
+                    "domainType": "DataClass",
+                    "label": "clinical guideline",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "43914d01-e71f-4d80-a09a-020285416981",
+            "domainType": "DataElement",
+            "label": "healthcare activities bundle",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "3bded819-3b23-454d-a1e3-10c5d4257829",
+                "domainType": "ReferenceType",
+                "label": "Reference to healthcare activities bundle",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "4d903096-09a6-424f-a679-82fa495dbd96",
+                    "domainType": "DataClass",
+                    "label": "healthcare activities bundle",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "0be3a826-7e5b-48c0-a76e-5348cc7b4bdd",
+            "domainType": "DataElement",
+            "label": "healthcare activity",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "dde40f9e-66ad-4120-babc-369892743aef",
+                "domainType": "ReferenceType",
+                "label": "Reference to healthcare activity",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "cc04557a-95ed-43f1-8e21-1392b42e6138",
+                    "domainType": "DataClass",
+                    "label": "healthcare activity",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ],
+                    "maxMultiplicity": 0,
+                    "minMultiplicity": 0
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        },
+        {
+            "id": "73c2f19d-b101-4936-8621-ec3232ad096c",
+            "domainType": "DataElement",
+            "label": "implements",
+            "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+            "breadcrumbs": [
+                {
+                    "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "label": "Tidied ContSys",
+                    "domainType": "DataModel",
+                    "finalised": false
+                },
+                {
+                    "id": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+                    "label": "care plan",
+                    "domainType": "DataClass"
+                }
+            ],
+            "dataClass": "9e77c2ba-a58f-4135-b470-d31192a27bdb",
+            "dataType": {
+                "id": "0aaedd4f-4ca8-4b3f-8f3d-6de2caef1fe3",
+                "domainType": "ReferenceType",
+                "label": "Reference to protocol",
+                "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                "breadcrumbs": [
+                    {
+                        "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                        "label": "Tidied ContSys",
+                        "domainType": "DataModel",
+                        "finalised": false
+                    }
+                ],
+                "referenceClass": {
+                    "id": "1d901fdd-6afb-486c-930b-bf20dc426451",
+                    "domainType": "DataClass",
+                    "label": "protocol",
+                    "model": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                    "breadcrumbs": [
+                        {
+                            "id": "6a326b76-554c-4177-9251-4186b2c80c1b",
+                            "label": "Tidied ContSys",
+                            "domainType": "DataModel",
+                            "finalised": false
+                        }
+                    ]
+                }
+            },
+            "maxMultiplicity": -1,
+            "minMultiplicity": 0
+        }
+    ]
+}

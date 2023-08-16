@@ -1,0 +1,29 @@
+﻿<#ftl output_format="JSON">
+<#macro relatedClasses dataClass>
+<#if dataClass.dataElements??>
+// Classes related to ${dataClass.label} 
+<#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
+${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.label}
+</#list>
+</#if>
+</#macro>
+<#macro printMetadata catalogueItem, metaNamespace, metaKey >
+<#list catalogueItem.metadata?filter(p -> p.key == metaKey && p.namespace == metaNamespace) as meta>${meta.value?replace("\"","\\\"")?trim}</#list></#macro>
+<#macro dumpMetadata catalogueItem>
+         <#list catalogueItem.metadata as metadata >
+            ${metadata.namespace} - ${metadata.key} - ${metadata.value}
+        </#list>
+    </#macro>
+{
+    "nodes": [
+<#list dataModel.dataClasses as class >
+        {
+            "id": "${class.label}",
+            "group": 1,
+            "clause": "<@printMetadata class, "directives.org.iso", "termClause" />",
+            "comment": "<@printMetadata class, "comments.iso.org", "ISO Comments/Issue" />",
+            "resolution": "<@printMetadata class, "comments.iso.org", "ISO Comments/Proposed resolution" />"
+        }<#sep>,
+         </#sep></#list>
+       ]
+}

@@ -1,0 +1,33 @@
+﻿<#ftl>
+<#macro relatedClasses dataClass>
+<#if dataClass.dataElements??>
+// Classes related to ${dataClass.label} 
+<#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
+${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.label}
+</#list>
+</#if>
+</#macro>
+<#macro dumpMetadata catalogueItem>
+         <#list catalogueItem.metadata as metadata >
+            ${metadata.namespace} - ${metadata.key} - ${metadata.value}
+         </#list>
+</#macro>
+{
+    "nodes": [
+<#list dataModel.dataClasses as class >
+
+        {
+            "id": "${class.label}",
+            "group": 1
+        }<@dumpMetadata class />
+        <#sep>,
+         </#sep></#list>
+       ],
+    "links": [
+
+        {
+            "source": "Napoleon",
+            "target": "Myriel",
+            "value": 1
+        }
+}
