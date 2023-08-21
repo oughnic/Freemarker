@@ -1,0 +1,66 @@
+﻿{
+  "resourceType" : "Questionnaire",
+  "id" : "${dataModel.label}",
+  "meta" : {
+    "versionId" : "1",
+    "lastUpdated" : "2023-03-03T03:05:07.9531803+00:00"
+  },
+  "text" : {
+    "status" : "generated"
+  },
+  "item" : [
+
+
+  <#list dataModel.childDataClasses as dataClass>
+    <@dataClassAsItem dataClass=dataClass/>
+    <#sep>,
+  </#list>
+  ]
+}
+
+<#macro dataClassAsItem dataClass>
+    {
+        "linkId" : "${dataClass.id}",
+        "text" : "${dataClass.label}",
+        "type" : "group",
+        "required" : true,
+        "repeats" : false,
+        "definition" : "${dataClass.description}",
+        "item" : [
+            <#list dataClass.dataClasses?sort_by("order") as childDataClass>
+                <@dataClassAsItem dataClass=childDataClass/>
+                <#sep>,
+            </#list>
+            <#list dataClass.dataElements?sort_by("order") as dataElement>
+                {
+                    "linkId" : "${dataElement.id}",
+                    "text" : "${dataElement.label}",
+                    "definition" : "${dataClass.description}",
+                    <#if dataElement.dataType.domainType == "EnumerationType">
+                    "type" : "choice",
+                    "answerOption": [
+                        <#list dataElement.dataType.enumerationValues?sort_by("order") as enumerationValue>
+                        {
+                        "valueCoding": {
+                            "code": "${enumerationValue.key}",
+                            "display" : "${enumerationValue.value}"
+                        }
+                        }<#sep>,
+                        </#list>
+                    ],
+                    </#if>
+                    <#if dataElement.dataType.domainType == "PrimitiveType">
+                    "type" : "${dataElement.dataType.label?lower_case}",
+                    </#if>
+                    <#if (dataElement.maxMultiplicity gt 1 || dataElement.maxMultiplicity == -1)>
+                    "repeats" : true
+                    <#else>
+                    "repeats" : false
+                    </#if>
+
+                }
+                <#sep>,
+            </#list>
+        ]
+    }
+</#macro>

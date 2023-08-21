@@ -1,0 +1,43 @@
+﻿
+<#---------------- -->
+<#-- Common macros -->
+<#-- ------------- -->
+
+<#-- List the classes related to an input class         -->
+<#-- Input parameters                                   -->
+<#--     dataClass - the source Mauro Data mapper class -->
+
+<#macro relatedClasses dataClass>
+<#if dataClass.dataElements??>
+<#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
+${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.label}
+</#list>
+</#if>
+</#macro>
+
+<#-- Print the metadata value for a catalogueItem filtered by namespace and key, escape double quotes and trim any whitespace -->
+<#-- Input parameters                                                                                                         -->
+<#--     catalogueItem - generic Mauro Catalogue Item with metadata                                                           -->
+<#--     metaNamespace - Namespace of the metadata profile                                                                    -->
+<#--     metaKey - The key identifying the parameter to retrieve                                                              -->
+
+<#macro printMetadata catalogueItem, metaNamespace, metaKey >
+<#list catalogueItem.metadata?filter(p -> p.key == metaKey && p.namespace == metaNamespace) as meta>${meta.value?replace("\"","\\\"")?trim}</#list></#macro>
+
+<#-- List all the metadata for a catalogueItem-->
+<#-- Input parameters                                                                                                         -->
+<#--     catalogueItem - generic Mauro Catalogue Item with metadata                                                           -->
+
+<#macro dumpMetadata catalogueItem>
+         <#list catalogueItem.metadata as metadata >
+            ${metadata.namespace} - ${metadata.key} - ${metadata.value}
+        </#list>
+    </#macro>
+
+<#macro termSubsection class >
+<#assign termClause >
+<@printMetadata class, "directives.org.iso", "termClause" />
+</#assign>
+<#list termClause?split(".") as subclause >
+${subclause}</#list>
+</#macro

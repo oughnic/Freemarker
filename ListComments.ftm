@@ -4,9 +4,10 @@
 <#-- Common macros -->
 <#-- ------------- -->
 
-<#-- List the classes related to an input class -->
-<#-- Input parameters -->
-<#-- dataClass - the source Mauro Data mapper class-->
+<#-- List the classes related to an input class     -->
+<#-- Input parameters                               -->
+<#-- dataClass - the source Mauro Data mapper class -->
+
 <#macro relatedClasses dataClass>
 <#if dataClass.dataElements??>
 <#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
