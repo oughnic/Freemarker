@@ -1,9 +1,13 @@
-﻿<#ftl>
+﻿<#ftl output_format="JSON">
 <#macro relatedClasses dataClass>
 <#if dataClass.dataElements??>
-// Classes related to ${dataClass.label} 
 <#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
-${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.label}
+        {
+            "source": "${dataClass.label}",
+            "target": "${dataElement.dataType.referenceClass.label}",
+            "value": 1,
+            "label": "${dataElement.label}"
+        }
 </#list>
 </#if>
 </#macro>
@@ -19,15 +23,13 @@ ${dataClass.label} ${dataElement.label} ${dataElement.dataType.referenceClass.la
         {
             "id": "${class.label}",
             "group": 1
-        }<@dumpMetadata class />
+        }
         <#sep>,
          </#sep></#list>
        ],
     "links": [
-
-        {
-            "source": "Napoleon",
-            "target": "Myriel",
-            "value": 1
-        }
+<#list dataModel.dataClasses as class >
+     <@relatedClasses class />
+</#list>
+    ]
 }
