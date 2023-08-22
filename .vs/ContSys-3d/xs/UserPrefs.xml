@@ -1,4 +1,4 @@
-﻿<Properties GitUserInfo="UsingGIT">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{F673F1A3-DA3C-444A-A7AB-32AAB452D365}|https">
   <MonoDevelop.Ide.Workbench ActiveDocument="FHIRQuestionnaire.ftm">
     <Files>
       <File FileName="ListComments.ftm" Line="5" Column="23" />
@@ -17,5 +17,6 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Solution_220Items.ContSys-3d PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
   <MonoDevelop.Ide.Workspace />
 </Properties>

@@ -1,0 +1,71 @@
+﻿<#ftl output_format="JSON">
+<#macro relatedClasses dataClass>
+<#if dataClass.dataElements??>
+<#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
+        {
+            "source": "${dataClass.label}",
+            "target": "${dataElement.dataType.referenceClass.label}",
+            "value": 1,
+            "label": "${dataElement.label}"
+        }<#sep>,
+         </#sep>
+</#list>
+</#if>
+</#macro>
+<#macro dumpMetadata catalogueItem>
+         <#list catalogueItem.metadata as metadata >
+            ${metadata.namespace} - ${metadata.key} - ${metadata.value}
+         </#list>
+</#macro>
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+
+    <script src="https://unpkg.com/three"></script>
+    <script src="https//unpkg.com/three-spritetext"></script>
+
+    <script src="https://unpkg.com/3d-force-graph"></script>
+    <!--<script src="../../dist/3d-force-graph.js"></script>-->
+
+    <script type="application/json" id="3d-contsys">
+
+{
+    "nodes": [
+<#list dataModel.dataClasses as class >
+
+        {
+            "id": "${class.label}",
+            "group": 1
+        }        <#sep>,
+         </#sep></#list>
+       ],
+    "links": [
+<#list dataModel.dataClasses as class >
+     <@relatedClasses class />
+</#list>
+    ]
+}
+    </script>
+</head>
+
+<body>
+    <div id="3d-graph"></div>
+
+    <script>const Graph = ForceGraph3D()
+      (document.getElementById('3d-graph'))
+        .graphData=JSON.parse(document.getElementById('3d-contsys').innerHTML)
+        .nodeAutoColorBy('group')
+        .nodeThreeObject(node => {
+          const sprite = new SpriteText(node.id);
+          sprite.material.depthWrite = false; // make sprite background transparent
+          sprite.color = node.color;
+          sprite.textHeight = 8;
+          return sprite;
+        });
+
+    // Spread nodes a little wider
+    Graph.d3Force('charge').strength(-120);</script>
+</body>

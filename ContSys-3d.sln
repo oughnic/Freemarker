@@ -5,24 +5,36 @@ VisualStudioVersion = 25.0.1705.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36E6DEF6-C247-4621-B69B-0EB64328144A}"
 	ProjectSection(SolutionItems) = preProject
-		3d-contsys.json = 3d-contsys.json
 		Miserables.ftm = Miserables.ftm
 		dump.json = dump.json
 		ListComments.ftm = ListComments.ftm
 		FHIRQuestionnaire.ftm = FHIRQuestionnaire.ftm
 		mauro-macro-library.ftm = mauro-macro-library.ftm
-		TextConcepts.html = TextConcepts.html
+		ContSys-3d\3d-contsys.json = ContSys-3d\3d-contsys.json
+		ContSys-3d\TextConcepts.html = ContSys-3d\TextConcepts.html
+		ContSys-3d\basic.html = ContSys-3d\basic.html
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContSys-3d", "ContSys-3d\ContSys-3d.csproj", "{F673F1A3-DA3C-444A-A7AB-32AAB452D365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F673F1A3-DA3C-444A-A7AB-32AAB452D365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F673F1A3-DA3C-444A-A7AB-32AAB452D365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F673F1A3-DA3C-444A-A7AB-32AAB452D365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F673F1A3-DA3C-444A-A7AB-32AAB452D365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {132A1F24-E1C9-43D4-9C43-99584E0AAF9D}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F673F1A3-DA3C-444A-A7AB-32AAB452D365} = {36E6DEF6-C247-4621-B69B-0EB64328144A}
 	EndGlobalSection
 EndGlobal

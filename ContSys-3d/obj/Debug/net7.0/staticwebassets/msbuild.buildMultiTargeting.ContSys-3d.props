@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/ContSys-3d.props" />
+</Project>
