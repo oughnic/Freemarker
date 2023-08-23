@@ -5029,20 +5029,56 @@
                                             ]
                                         }
     </script>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" asp-append-version="true" />
+  
 </head>
 
 <body>
-    <div id="3d-graph"></div>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Three dimensional view of a system of concepts for the continuity of care</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <!--<ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div >
+        <main role="main" class="pb-3">
+            <div id="3d-graph">
 
-    <script>
-        const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
+            </div>
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - ContSys_3d - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script>const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
         var rootId = 'health record';
+        var pageContainer = document.getElementById('3d-graph');
 
         // link parent/children
         const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
         contSysData.links.forEach(link => {
             nodesById[link.source].childLinks.push(link);
         });
+
+
 
         let gData = {
             nodes: [],
@@ -5053,9 +5089,7 @@
             const visibleNodes = [];
             const visibleLinks = [];
             (function traverseTree(node = nodesById[rootId]) {
-                console.log('Traversing ' + node.id);
-                console.log(node.id);
-               
+
                 visibleNodes.push(node);
                 // if (node.collapsed) return;
 
@@ -5065,7 +5099,6 @@
                 node.childLinks
                     .map(link => ((typeof link.target) === 'object') ? link.target : nodesById[link.target]) // get child node
                     .forEach(childNode => {
-                        console.log(node.id + ' -> ' + childNode.id)
                         var found = 0;
                         visibleNodes.forEach(n => {
                             if (n.id == childNode.id) found = 1;
@@ -5073,56 +5106,45 @@
 
                         if (found == 0) {
                             // Add the new concept to the list
-                            console.log('Adding ' + childNode.id);
                             node.collapsed = false;
                             visibleNodes.push(childNode);
-                         
+
                         };
                     });
-                 })();  // End of traverseTree
+            })();  // End of traverseTree
 
             let additionalConcepts = { nodes: visibleNodes, links: visibleLinks };
 
-       
-
             if (gData.nodes.length > 0) {
-               
+
                 gData.nodes.forEach(item => {
                     var found = 0;
                     additionalConcepts.nodes.forEach(ac => {
                         if (item.id == ac.id) found = 1;
-                        });
-                    if (found ==0) additionalConcepts.nodes.push(item);
                     });
-                            
+                    if (found == 0) additionalConcepts.nodes.push(item);
+                });
+
                 gData.links.forEach(item => {
                     additionalConcepts.links.push(item);
-                    });
-                
-            }
-            else
-            {
-                    console.log('gData is empty.')
+                });
 
             };
 
-
-            console.log('gData');
-            console.log(gData);
-            console.log('additionalConcepts');
-            console.log(additionalConcepts);
             gData = additionalConcepts;
+            console.log(gData);
 
             return additionalConcepts;
-           
+
         };
 
 
-       gData = getPrunedTree();
-       console.log(gData);
-       const Graph = ForceGraph3D()
+        gData = getPrunedTree();
+        console.log(gData);
+        const Graph = ForceGraph3D()
             (document.getElementById('3d-graph'))
             .nodeAutoColorBy('group')
+            .width(pageContainer.clientWidth).height(pageContainer.clientHeight)
             .onNodeDragEnd(node => {
                 node.fx = node.x;
                 node.fy = node.y;
@@ -5136,6 +5158,15 @@
                     Graph.graphData(gData);
                 }
             })
+            .onNodeRightClick(node => {
+                rootId = node.id;
+                gData.nodes = [];
+                gData.links = [];
+                gData = getPrunedTree();
+                Graph.graphData(gData);
+            })
+            .linkOpacity(0.7)
+            .linkWidth(1)
             .linkThreeObjectExtend(true)
             .linkThreeObject(link => {
                 // extend link with text sprite
@@ -5146,7 +5177,7 @@
             })
             .linkPositionUpdate((sprite, { start, end }) => {
                 const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
-                    [c]: start[c] + (end[c] - start[c]) / 3 // calc middle point
+                    [c]: start[c] + (end[c] - start[c]) / 3 // calc third point
                 })));
 
                 // Position sprite
@@ -5154,14 +5185,21 @@
             })
             .nodeThreeObject(node => {
                 const sprite = new SpriteText(node.id.split(" ").join("\n"));
-                sprite.material.depthWrite = false; // make sprite background transparent
+                sprite.material.depthWrite = true;
                 sprite.color = node.color;
-                sprite.textHeight = 8;
+                sprite.textHeight = 4;
                 return sprite;
             })
             .graphData(gData);
 
         // Spread nodes a little wider
         Graph.d3Force('charge').strength(-120);
-    </script>
+
+        function updateHighlight() {
+            // trigger update of highlighted objects in scene
+            Graph
+                .nodeColor(Graph.nodeColor())
+                .linkWidth(Graph.linkWidth())
+                .linkDirectionalParticles(Graph.linkDirectionalParticles());
+        }</script>
 </body>

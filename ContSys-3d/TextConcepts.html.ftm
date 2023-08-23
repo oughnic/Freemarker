@@ -77,11 +77,14 @@ ${(termClause?markup_string?split("."))[1]}<#else>
         const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
         var rootId = 'health record';
 
+
         // link parent/children
         const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
         contSysData.links.forEach(link => {
             nodesById[link.source].childLinks.push(link);
         });
+
+
 
         let gData = {
             nodes: [],
@@ -92,8 +95,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
             const visibleNodes = [];
             const visibleLinks = [];
             (function traverseTree(node = nodesById[rootId]) {
-                console.log('Traversing ' + node.id);
-                console.log(node.id);
                
                 visibleNodes.push(node);
                 // if (node.collapsed) return;
@@ -104,7 +105,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
                 node.childLinks
                     .map(link => ((typeof link.target) === 'object') ? link.target : nodesById[link.target]) // get child node
                     .forEach(childNode => {
-                        console.log(node.id + ' -> ' + childNode.id)
                         var found = 0;
                         visibleNodes.forEach(n => {
                             if (n.id == childNode.id) found = 1;
@@ -112,7 +112,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
 
                         if (found == 0) {
                             // Add the new concept to the list
-                            console.log('Adding ' + childNode.id);
                             node.collapsed = false;
                             visibleNodes.push(childNode);
                          
@@ -121,8 +120,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
                  })();  // End of traverseTree
 
             let additionalConcepts = { nodes: visibleNodes, links: visibleLinks };
-
-       
 
             if (gData.nodes.length > 0) {
                
@@ -138,19 +135,10 @@ ${(termClause?markup_string?split("."))[1]}<#else>
                     additionalConcepts.links.push(item);
                     });
                 
-            }
-            else
-            {
-                    console.log('gData is empty.')
-
             };
 
-
-            console.log('gData');
-            console.log(gData);
-            console.log('additionalConcepts');
-            console.log(additionalConcepts);
             gData = additionalConcepts;
+            console.log(gData);
 
             return additionalConcepts;
            
@@ -159,7 +147,7 @@ ${(termClause?markup_string?split("."))[1]}<#else>
 
        gData = getPrunedTree();
        console.log(gData);
-       const Graph = ForceGraph3D()
+        const Graph = ForceGraph3D()
             (document.getElementById('3d-graph'))
             .nodeAutoColorBy('group')
             .onNodeDragEnd(node => {
@@ -175,6 +163,15 @@ ${(termClause?markup_string?split("."))[1]}<#else>
                     Graph.graphData(gData);
                 }
             })
+            .onNodeRightClick(node => {
+                rootId = node.id;
+                gData.nodes = [];
+                gData.links = [];
+                gData = getPrunedTree();
+                Graph.graphData(gData);
+            })
+            .linkOpacity(0.7)
+            .linkWidth(1)
             .linkThreeObjectExtend(true)
             .linkThreeObject(link => {
                 // extend link with text sprite
@@ -185,7 +182,7 @@ ${(termClause?markup_string?split("."))[1]}<#else>
             })
             .linkPositionUpdate((sprite, { start, end }) => {
                 const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
-                    [c]: start[c] + (end[c] - start[c]) / 3 // calc middle point
+                    [c]: start[c] + (end[c] - start[c]) / 3 // calc third point
                 })));
 
                 // Position sprite
@@ -193,14 +190,22 @@ ${(termClause?markup_string?split("."))[1]}<#else>
             })
             .nodeThreeObject(node => {
                 const sprite = new SpriteText(node.id.split(" ").join("\n"));
-                sprite.material.depthWrite = false; // make sprite background transparent
+                sprite.material.depthWrite = true; 
                 sprite.color = node.color;
-                sprite.textHeight = 8;
+                sprite.textHeight = 4;
                 return sprite;
             })
             .graphData(gData);
 
         // Spread nodes a little wider
         Graph.d3Force('charge').strength(-120);
+
+        function updateHighlight() {
+            // trigger update of highlighted objects in scene
+            Graph
+                .nodeColor(Graph.nodeColor())
+                .linkWidth(Graph.linkWidth())
+                .linkDirectionalParticles(Graph.linkDirectionalParticles());
+        }
     </script>
 </body>
