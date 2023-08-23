@@ -5036,7 +5036,7 @@
 
     <script>
         const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
-        var rootId = 'subject of care';
+        var rootId = 'health record';
 
         // link parent/children
         const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
@@ -5053,38 +5053,61 @@
             const visibleNodes = [];
             const visibleLinks = [];
             (function traverseTree(node = nodesById[rootId]) {
-                console.log('Traversing ' + node.id)
+                console.log('Traversing ' + node.id);
+                console.log(node.id);
+               
                 visibleNodes.push(node);
                 // if (node.collapsed) return;
+
+                // Add the links
                 visibleLinks.push(...node.childLinks);
+
                 node.childLinks
                     .map(link => ((typeof link.target) === 'object') ? link.target : nodesById[link.target]) // get child node
                     .forEach(childNode => {
                         console.log(node.id + ' -> ' + childNode.id)
-                        if (node.id == childNode.id) return;
-                        node.collapsed = false;
-                        visibleNodes.push(childNode);
-                        });
-            })(); // IIFE
+                        var found = 0;
+                        visibleNodes.forEach(n => {
+                            if (n.id == childNode.id) found = 1;
+                        });  // End of forEach
 
-            let res = { nodes: visibleNodes, links: visibleLinks };
+                        if (found == 0) {
+                            // Add the new concept to the list
+                            console.log('Adding ' + childNode.id);
+                            node.collapsed = false;
+                            visibleNodes.push(childNode);
+                         
+                        };
+                    });
+                 })();  // End of traverseTree
+
+            let additionalConcepts = { nodes: visibleNodes, links: visibleLinks };
 
             if (gData.nodes.length > 0) {
-                console.log('Concat active');
+               
                 gData.nodes.forEach(item => {
-                    res.nodes.push(item);
-                });
+                    additionalConcepts.nodes.push(item);
+                    });
+                            
                 gData.links.forEach(item => {
-                    res.links.push(item);
-                });
+                    additionalConcepts.links.push(item);
+                    });
+                
+            }
+            else
+            {
+                    console.log('gData is empty.')
+
             };
+
+
             console.log('gData');
             console.log(gData);
-            console.log('res');
-            console.log(res);
-            gData = res;
+            console.log('additionalConcepts');
+            console.log(additionalConcepts);
+            gData = additionalConcepts;
 
-            return res;
+            return additionalConcepts;
            
         };
 
@@ -5104,8 +5127,6 @@
                     // node.collapsed = !node.collapsed; // toggle collapse state
                     rootId = node.id;
                     gData = getPrunedTree();
-                    console.log('gData has changed');
-                    console.log(gData);
                     Graph.graphData(gData);
                 }
             })
@@ -5113,7 +5134,7 @@
             .linkThreeObject(link => {
                 // extend link with text sprite
                 const sprite = new SpriteText(`${link.label}`);
-                sprite.color = 'lightgrey';
+                sprite.color = 'white';
                 sprite.textHeight = 4;
                 return sprite;
             })
