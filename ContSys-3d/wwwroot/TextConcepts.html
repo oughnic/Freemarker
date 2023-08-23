@@ -5083,10 +5083,16 @@
 
             let additionalConcepts = { nodes: visibleNodes, links: visibleLinks };
 
+       
+
             if (gData.nodes.length > 0) {
                
                 gData.nodes.forEach(item => {
-                    additionalConcepts.nodes.push(item);
+                    var found = 0;
+                    additionalConcepts.nodes.forEach(ac => {
+                        if (item.id == ac.id) found = 1;
+                        });
+                    if (found ==0) additionalConcepts.nodes.push(item);
                     });
                             
                 gData.links.forEach(item => {
