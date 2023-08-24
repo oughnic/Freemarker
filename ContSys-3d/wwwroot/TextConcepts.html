@@ -5035,50 +5035,62 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+    
+
+    <header  id="hdr">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container" >
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Three dimensional view of a system of concepts for the continuity of care</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <!--<ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                    </ul>-->
-                </div>
+                    </ul>
+                </div>-->
             </div>
         </nav>
     </header>
-    <div >
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main" class="d-flex flex-column flex-grow" >
             <div id="3d-graph">
 
             </div>
         </main>
     </div>
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted"  id="ftr">
         <div class="container">
-            &copy; 2023 - ContSys_3d - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            This model is currently in development.
         </div>
     </footer>
-    <script>const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
+    <script>
+        const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
         var rootId = 'health record';
-        var pageContainer = document.getElementById('3d-graph');
-
+       
+        var hdr = document.getElementById('hdr');
+        var ftr = document.getElementById('ftr');
+        console.log('Header height: ' + hdr.clientHeight + '; footer height: ' + ftr.clientHeight);
         // link parent/children
         const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
         contSysData.links.forEach(link => {
             nodesById[link.source].childLinks.push(link);
         });
 
+        function outerHeight(element) {
+            const height = element.offsetHeight,
+                style = window.getComputedStyle(element)
 
+            return ['top', 'bottom']
+                .map(side => parseInt(style[`margin-${side}`]))
+                .reduce((total, side) => total + side, height)
+        }
 
         let gData = {
             nodes: [],
@@ -5141,10 +5153,11 @@
 
         gData = getPrunedTree();
         console.log(gData);
+
         const Graph = ForceGraph3D()
             (document.getElementById('3d-graph'))
             .nodeAutoColorBy('group')
-            .width(pageContainer.clientWidth).height(pageContainer.clientHeight)
+            .width(window.clientWidth).height(window.innerHeight - outerHeight(hdr) - outerHeight(ftr))
             .onNodeDragEnd(node => {
                 node.fx = node.x;
                 node.fy = node.y;
