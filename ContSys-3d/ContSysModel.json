@@ -1,0 +1,5730 @@
+﻿{
+  "nodes": [
+    {
+      "id": "data repository",
+      "kind": "class",
+      "label": "data repository",
+      "detail": "an identifiable data storage facility",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "person role",
+      "kind": "class",
+      "label": "person role",
+      "detail": "structural role of a person",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "healthcare",
+      "kind": "class",
+      "label": "healthcare",
+      "detail": "care activities, services, management or supplies related to the health of an individual   ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "observed condition",
+      "kind": "class",
+      "label": "observed condition",
+      "detail": "health condition observed by a healthcare actor",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "structure component",
+      "kind": "class",
+      "label": "STRUCTURE_COMPONENT",
+      "detail": "electronic health record component which contain one of more other electronic health record components",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare activity period",
+      "kind": "class",
+      "label": "healthcare activity period",
+      "detail": "time interval during which healthcare activities are performed for a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "medical device",
+      "kind": "class",
+      "label": "medical device",
+      "detail": "instrument, apparatus, implement, machine, appliance, implant, reagent for in vitro use, software, material or other similar or related article, intended by the manufacturer to be used, alone or in combination, for human beings, for one or more of the specific medical purpose(s) of:\n• diagnosis, prevention, monitoring, treatment or allevi¬ation of disease,\n• diagnosis, monitoring, treatment, alleviation of, or compensation for, an injury,\n• investigation, replacement, modification, or support of the anatomy, or of a physiologi¬cal process,\n• supporting or sustaining life,\n•\tcontrol of conception,\n•\tcleaning, disinfection or sterilization of medical devices,\n•\tproviding information by means of in vitro examination of specimens derived from the human body; \nand does not achieve its primary intended action by pharmacological, immunological, or metabolic means, in or on the human body, but which may be assisted in its intended function by such means",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "healthcare provider",
+      "kind": "class",
+      "label": "healthcare provider",
+      "detail": "healthcare actor that is able to be assigned one or more care period mandates",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "social care activity",
+      "kind": "class",
+      "label": "social care activity",
+      "detail": "healthcare activity intended to improve health state mitigating or removing factors related to social determinants of health",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "demand mandate",
+      "kind": "class",
+      "label": "request mandate",
+      "detail": "healthcare mandate implying the right and obligation to demand healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "electronic patient summary",
+      "kind": "class",
+      "label": "electronic patient summary",
+      "detail": "electronic health record extract containing essential healthcare information intended for specific uses",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "simple text value",
+      "kind": "class",
+      "label": "SIMPLE_TEXT",
+      "detail": "data value used for representing a sequence of Unicode characters and optionally the language of the text",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "resource",
+      "kind": "class",
+      "label": "resource",
+      "detail": "asset that is utilized or consumed during the execution of activities ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "electronic health record component",
+      "kind": "class",
+      "label": "RECORD_COMPONENT",
+      "detail": "health record component which only includes information in electronic format",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "demographic entity",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_ENTITY",
+      "detail": "structure component containing demographic information describing a single person, device, software agent or organisation",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "appointment",
+      "kind": "class",
+      "label": "appointment",
+      "detail": "arrangement to meet someone at a particular time and place",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "care plan",
+      "kind": "class",
+      "label": "care plan",
+      "detail": "documented plan describing planned healthcare and social care activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "point in time value",
+      "kind": "class",
+      "label": "POINT_IN_TIME",
+      "detail": "data value used for representing a point in time with minimum resolution year, and maximum resolution fraction of second",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "personal health record",
+      "kind": "class",
+      "label": "personal health record",
+      "detail": "health record held and maintained by the subject of care or a subject of care proxy",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "initial contact",
+      "kind": "class",
+      "label": "initial contact",
+      "detail": "contact during which a clinical process is initiated",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "self-care period",
+      "kind": "class",
+      "label": "self-care period",
+      "detail": "healthcare activity period where prescribed self-care is performed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "social care activity element",
+      "kind": "class",
+      "label": "social care activity element",
+      "detail": "element of social care activity that addresses one type of purpose",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "element",
+      "kind": "class",
+      "label": "ELEMENT",
+      "detail": "electronic health record component within an entry or cluster containing a single data value",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare activities bundle",
+      "kind": "class",
+      "label": "healthcare activities bundle",
+      "detail": "set of healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "quality in healthcare",
+      "kind": "class",
+      "label": "quality in healthcare",
+      "detail": "degree to which healthcare fulfils requirements related to defined quality characteristics",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "cluster",
+      "kind": "class",
+      "label": "CLUSTER",
+      "detail": "structure component used for creating hierarchical structures within an entry and with elements as leaf nodes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "continuity facilitator mandate",
+      "kind": "class",
+      "label": "continuity facilitator mandate",
+      "detail": "healthcare mandate assigning the right and obligation to monitor and coordinate the delivery of care to one subject of care including the right to retrieve relevant information and obligation to document all activities based on this mandate",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "healthcare information request",
+      "kind": "class",
+      "label": "healthcare information request",
+      "detail": "request sent out by a healthcare actor to another healthcare actor for specific healthcare information needed for the provision of healthcare to a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "demographic element",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_ELEMENT",
+      "detail": "record component within a demographic entity or demographic cluster containing a single data value",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "social care process outcome evaluation",
+      "kind": "class",
+      "label": "social care process outcome",
+      "detail": "social care process evaluation where the effects of a social care process on a health state are assessed comparing the resultant condition to the target condition",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "health concern",
+      "kind": "class",
+      "label": "health concern",
+      "detail": "health record extract that includes all health record components associated with a health thread for a specific concern",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "continuity of care",
+      "kind": "class",
+      "label": "continuity of care",
+      "detail": "organisational principle focusing on the time-related links between healthcare activities, between social care provider activities and time-related interactions between healthcare and social care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "social need",
+      "kind": "class",
+      "label": "social need",
+      "detail": "health circumstance related to the social determinants of health of a subject of care causing a deficit in the current health state compared to aspects of a desired future health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "health record component",
+      "kind": "class",
+      "label": "health record component",
+      "detail": "part of a health record that is identifiable for the purposes of referencing and revision",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "contact",
+      "kind": "class",
+      "label": "contact",
+      "detail": "interaction between one or more subject of care and one or more healthcare personnel",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "knowledge",
+      "kind": "class",
+      "label": "knowledge",
+      "detail": "cognizance which is based on reasoning and passes verification",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "risk",
+      "kind": "class",
+      "label": "risk",
+      "detail": "combination of the probability of an event and its consequences",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "healthcare matter",
+      "kind": "class",
+      "label": "healthcare matter",
+      "detail": "representation of a matter related to the health of a subject of care and/or the provision of healthcare to that subject of care, as identified by one or more healthcare actors",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare condition assessment",
+      "kind": "class",
+      "label": "health condition assessment",
+      "detail": "healthcare activity element where an opinion related to health conditions of the subject of care are formed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "deprecated term",
+      "kind": "class",
+      "label": "deprecated term",
+      "detail": "term rejected by an authoritative body",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "prescriber",
+      "kind": "class",
+      "label": "prescriber",
+      "detail": "the role taken by a care professional when recommending or authorising a care activity",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "attachment value",
+      "kind": "class",
+      "label": "ATTACHMENT",
+      "detail": "data value used for representing information objects that may require special processing operations to be performed in order for the data to be interpreted or rendered",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "healthcare provider activity",
+      "kind": "class",
+      "label": "healthcare provider activity",
+      "detail": "healthcare activity performed by a healthcare provider",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare service directory",
+      "kind": "class",
+      "label": "healthcare service directory",
+      "detail": "directory of the types of healthcare services offered by one or more healthcare providers",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare professional entitlement",
+      "kind": "class",
+      "label": "healthcare professional entitlement",
+      "detail": "registered authorization given to a person in order to allow the person to have or perform specific roles in healthcare",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "healthcare commitment",
+      "kind": "class",
+      "label": "healthcare commitment",
+      "detail": "acceptance of a healthcare mandate by the healthcare actor to whom it is assigned",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "healthcare mandate",
+      "kind": "class",
+      "label": "healthcare mandate",
+      "detail": "mandate (commission) based on a commitment and either an informed consent or an authorization by law, defining the rights and obligations of one healthcare actor with regard to his involvement in healthcare processes performed for a specific subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "health need",
+      "kind": "class",
+      "label": "health need",
+      "detail": "health circumstance causing a deficit in the current health state compared to aspects of a desired future health",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "audit information",
+      "kind": "class",
+      "label": "AUDIT_INFO",
+      "detail": "documentation of the details of a revision of a base component",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "consent denial",
+      "kind": "class",
+      "label": "consent denial",
+      "detail": "refusal to permit specific healthcare activities to be performed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "demand for initial contact",
+      "kind": "class",
+      "label": "request for initial contact",
+      "detail": "first request for care concerning one or more specific health circumstances to be assessed by a healthcare provider",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "referral",
+      "kind": "class",
+      "label": "request for referral",
+      "detail": "request for care where a healthcare professional asks a healthcare provider to state a healthcare commitment for a care period mandate",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "clinical guideline",
+      "kind": "class",
+      "label": "clinical guideline",
+      "detail": "set of systematically developed statements to assist the decisions made by healthcare actors about healthcare activities to be performed with regard to specified health circumstances ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "medicinal product",
+      "kind": "class",
+      "label": "medicine",
+      "detail": "pharmaceutical product or combination of pharmaceutical products that may be administered to human beings (or animals) for treating or preventing disease, with the aim/purpose of making a medical diagnosis or to restore, correct or modify physiological functions",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "next of kin",
+      "kind": "class",
+      "label": "next of kin",
+      "detail": "person role being either the closest living relative of the subject of care or identified as the one they have a close relationship with",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "link",
+      "kind": "class",
+      "label": "LINK",
+      "detail": "base component that describes an association from information in an EHR extract to other information within that EHR extract",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "social care report",
+      "kind": "class",
+      "label": "social cae report",
+      "detail": "social record extract conveying specifically focused social care information in order to fulfil current information needs of the recipient",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "subject of care desire",
+      "kind": "class",
+      "label": "subject of care desire",
+      "detail": "desire expressed by the subject of care or the subject of care proxy regarding the performance of certain healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "target condition",
+      "kind": "class",
+      "label": "target condition",
+      "detail": "potential health condition representing health objectives and/or healthcare goals",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "social record",
+      "kind": "class",
+      "label": "social record",
+      "detail": "data repository regarding the social care of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare funds",
+      "kind": "class",
+      "label": "care funds",
+      "detail": "resource provided for funding healthcare delivery",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "organizational pattern",
+      "kind": "class",
+      "label": "organizational pattern",
+      "detail": "relationships between the various parts of an organization",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "health problem list",
+      "kind": "class",
+      "label": "health problem list",
+      "detail": "health thread linking a set of health problems ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "risk condition",
+      "kind": "class",
+      "label": "risk condition",
+      "detail": "potential health condition representing an unintended future health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "synonym",
+      "kind": "class",
+      "label": "synonym",
+      "detail": "one of two or more terms denoting the same concept",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "mandate to export personal information",
+      "kind": "class",
+      "label": "mandate to export personal information",
+      "detail": "healthcare mandate implying the right to communicate health record extracts",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "other carer",
+      "kind": "class",
+      "label": "other carer",
+      "detail": "person being a healthcare third party",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "healthcare information",
+      "kind": "class",
+      "label": "healthcare information",
+      "detail": "information about a person, relevant to his or her healthcare",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "string value",
+      "kind": "class",
+      "label": "STRING",
+      "detail": "data value used for representing a sequence of Unicode characters",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "healthcare service",
+      "kind": "class",
+      "label": "healthcare service",
+      "detail": "set of healthcare activities offered by healthcare provider",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "clinical pathway",
+      "kind": "class",
+      "label": "clinical pathway",
+      "detail": "detailed guidance for each stage in the interdisciplinary management of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "healthcare personnel",
+      "kind": "class",
+      "label": "healthcare personnel",
+      "detail": "person employed by a healthcare organisation",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "integer value",
+      "kind": "class",
+      "label": "INTEGER",
+      "detail": "data value used for representing an exact integral values.",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "social care activity management",
+      "kind": "class",
+      "label": "social care activity management",
+      "detail": "healthcare activity element during which the status of social care activities in an individual care plan are changed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "party",
+      "kind": "class",
+      "label": "party",
+      "detail": "person or group performing a role (3.3.5) in relation to the business of a specific community or domain",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "excluded condition",
+      "kind": "class",
+      "label": "excluded condition",
+      "detail": "considered condition that one or more healthcare professionals have determined not to be consistent with the known observed conditions",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "output health state",
+      "kind": "class",
+      "label": "output health state",
+      "detail": "health state when a healthcare process ends",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "healthcare activity delay",
+      "kind": "class",
+      "label": "healthcare activity delay",
+      "detail": "health related period during which a healthcare activity is planned but not started",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "objection",
+      "kind": "class",
+      "label": "objection",
+      "detail": "subject of care desire that specific healthcare activities are not performed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "person",
+      "kind": "class",
+      "label": "person",
+      "detail": "individual human being",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "consent competence",
+      "kind": "class",
+      "label": "consent competence",
+      "detail": "capability of the subject of care and/or the subject of care proxy to give or withhold informed consent",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "discharge summary",
+      "kind": "class",
+      "label": "discharge summary",
+      "detail": "discharge report summarizing a mandated period of care ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "vulnerable condition",
+      "kind": "class",
+      "label": "vulnerable condition",
+      "detail": "observed or potentially observable aspects of the health state with particular attention on the social determinants of health",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "external link",
+      "kind": "class",
+      "label": "EXTERNAL_LINK",
+      "detail": "base component that describes an association from information in an EHR extract to information outside that EHR extract",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "multi-professional care plan",
+      "kind": "class",
+      "label": "multi-professional care plan",
+      "detail": "care plan encompassing healthcare provider activities performed by healthcare professionals having different healthcare professional entitlements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "social care process",
+      "kind": "class",
+      "label": "social care process",
+      "detail": "healthcare process encompassing all social care provider activities that addresses identified or specified social needs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "electronic social record",
+      "kind": "class",
+      "label": "electronic social record",
+      "detail": "social record where all information is stored on electronic media",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "resource delay",
+      "kind": "class",
+      "label": "resource delay",
+      "detail": "healthcare activity delay caused by resource constraints",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "health related period",
+      "kind": "class",
+      "label": "health related period",
+      "detail": "time interval related to the health of a subject of care and/or the provision of healthcare for that subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "considered condition",
+      "kind": "class",
+      "label": "considered condition",
+      "detail": "potential health condition considered by a healthcare actor on the basis of one or more observed conditions",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "health approach",
+      "kind": "class",
+      "label": "health approach",
+      "detail": "episode of care during which the healthcare activities performed address one specific healthcare goal",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "health",
+      "kind": "class",
+      "label": "health",
+      "detail": "state of complete physical, mental and social well-being",
+      "childLinks": [],
+      "collapsed": false,
+      "group": 1
+    },
+    {
+      "id": "entry",
+      "kind": "class",
+      "label": "ENTRY",
+      "detail": "structure componentthat represents the data documenting one clinical observation or a series of related observations, or a clinical statement, an explanation of clinical reasoning, a healthcare intention, plan or action.",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "mandated period of care",
+      "kind": "class",
+      "label": "mandated period of care",
+      "detail": "set of healthcare activity periods where a healthcare provider is mandated to perform the healthcare activities required to address specific health needs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "protocol",
+      "kind": "class",
+      "label": "protocol",
+      "detail": "customized clinical guideline ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "organization",
+      "kind": "class",
+      "label": "organization",
+      "detail": "person or group of people that has its own functions with responsibilities, authorities and relationships to achieve its objectives",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "episodes of care bundle",
+      "kind": "class",
+      "label": "episodes of care bundle",
+      "detail": "group of episodes of care delineated by a health thread",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "healthcare resource management",
+      "kind": "class",
+      "label": "healthcare resource management",
+      "detail": "activities to direct and control the supply and use of the healthcare resources required to perform healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "care period mandate",
+      "kind": "class",
+      "label": "care period mandate",
+      "detail": "healthcare mandate commissioning a mandated period of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "composition",
+      "kind": "class",
+      "label": "COMPOSITION",
+      "detail": "structure component containing information composed during one clinical encounter or documentation session, and committed within one EHR",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "automatic medical device",
+      "kind": "class",
+      "label": "automatic medical device",
+      "detail": "medical device capable of performing automated healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "extracted component set",
+      "kind": "class",
+      "label": "EXTRACTED_COMPONENT_SET",
+      "detail": "structure component extracted from an EHR for the purpose of being communicated in an EHR extract as the target of one or more links",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare process",
+      "kind": "class",
+      "label": "healthcare process",
+      "detail": "set of interrelated or interacting healthcare activities which transforms inputs into outputs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "authorization by law",
+      "kind": "class",
+      "label": "authorization by law",
+      "detail": "provision in legislation that in certain circumstances may overrule the need for informed consent",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "item",
+      "kind": "class",
+      "label": "ITEM",
+      "detail": "abstract structure component that holds all properties common for clusters and elements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare appointment",
+      "kind": "class",
+      "label": "healthcare appointment",
+      "detail": "appointment for a contact",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "service",
+      "kind": "class",
+      "label": "service",
+      "detail": "output of an organization (3.3.1) with at least one activity necessarily performed between the organization and the customer",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "care performer",
+      "kind": "class",
+      "label": "care performer",
+      "detail": "functional role adopted by care personnel when performing care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "section",
+      "kind": "class",
+      "label": "SECTION",
+      "detail": "structure component used for creating hierarchical structures within a composition and with entries as leaf nodes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare organization",
+      "kind": "class",
+      "label": "healthcare organization",
+      "detail": "organisation being a healthcare provider",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "functional role",
+      "kind": "class",
+      "label": "functional role",
+      "detail": "role arising out of an association with an activity.",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "subject of care proxy",
+      "kind": "class",
+      "label": "subject of care proxy",
+      "detail": "person with authority to take decisions on behalf of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "social record component",
+      "kind": "class",
+      "label": "social record component",
+      "detail": "part of a social record that is identifiable for the purposes of referencing and revision",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "social care planning",
+      "kind": "class",
+      "label": "social care planning",
+      "detail": "element of social care activity management where an individual care plan is managed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "health record",
+      "kind": "class",
+      "label": "health record",
+      "detail": "data repository regarding the health and healthcare of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "structural role",
+      "kind": "class",
+      "label": "structural role",
+      "detail": "role specifying relations between entities having regard for competence and responsibility, often reflecting organisational or hierarchical relations",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "mandate",
+      "kind": "class",
+      "label": "mandate",
+      "detail": "commission to act",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "social care provider activity",
+      "kind": "class",
+      "label": "social care provider activity",
+      "detail": "social care activity performed by a healthcare provider within the social context",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare goal",
+      "kind": "class",
+      "label": "healthcare goal",
+      "detail": "desired achievement of one or more healthcare activities, considered as an intermediate operational step to reach a specific health objective",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "healthcare supporting organization",
+      "kind": "class",
+      "label": "healthcare supporting organisation",
+      "detail": "organisation being healthcare third party",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "clinical process interest",
+      "kind": "class",
+      "label": "clinical process interest",
+      "detail": "health thread comprising all healthcare matters related to a specific clinical process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "needed healthcare activity",
+      "kind": "class",
+      "label": "needed healthcare activities",
+      "detail": "healthcare activities bundle which includes those healthcare activities assessed as needed to address specified health need",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "request",
+      "kind": "class",
+      "label": "request for service",
+      "detail": "request for care where a healthcare professional asks a healthcare provider to perform one or more healthcare provider activities ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "social care process evaluation",
+      "kind": "class",
+      "label": "social care process evaluation",
+      "detail": "social care evaluation where healthcare processes are systematically assessed against requirements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "health problem",
+      "kind": "class",
+      "label": "health problem",
+      "detail": "health condition considered by a healthcare actor to be a problem",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "process",
+      "kind": "class",
+      "label": "process",
+      "detail": "set of interrelated or interacting activities that use inputs to deliver an intended result   ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "social care intervention",
+      "kind": "class",
+      "label": "social care intervention",
+      "detail": "social care activity intended to improve, mitigate or remove factors related to social determinants of health",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "instance identifier value",
+      "kind": "class",
+      "label": "INSTANCE_IDENTIFIER",
+      "detail": "data value used for representing identifier that uniquely identifies an object",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "health issue",
+      "kind": "class",
+      "label": "health issue",
+      "detail": "representation of an issue related to the health of a subject of care as identified by one or more healthcare actors",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "demand for care",
+      "kind": "class",
+      "label": "request for care",
+      "detail": "request for healthcare provider activities expressed by a healthcare actor",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "physical quantity value",
+      "kind": "class",
+      "label": "PHYSICAL_QUANTITY",
+      "detail": "data value used for representing a quantity expressing the result of a measuring",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "social care evaluation",
+      "kind": "class",
+      "label": "social care evaluation",
+      "detail": "social care activity element where aspects of at least one other social care activity element is evaluated",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "clinical report",
+      "kind": "class",
+      "label": "clinical report",
+      "detail": "health record extract conveying specifically focused healthcare information in order to fulfil current information needs of the recipient",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "quality assurance",
+      "kind": "class",
+      "label": "quality assurance",
+      "detail": "part of quality management focused on providing confidence that quality requirements will be fulfilled",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "healthcare investigation",
+      "kind": "class",
+      "label": "healthcare investigation",
+      "detail": "healthcare activity element with the intention to clarify one or more health conditions of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare communication",
+      "kind": "class",
+      "label": "healthcare communication",
+      "detail": "healthcare activity element where at least two healthcare actors communicate",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "duration value",
+      "kind": "class",
+      "label": "DURATION",
+      "detail": "data value used for representing a lapse of time",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "certificate related to a healthcare matter",
+      "kind": "class",
+      "label": "specific healthcare information request",
+      "detail": "official document issued by a healthcare actor attesting health condition relating to a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "point of care",
+      "kind": "class",
+      "label": "point of care",
+      "detail": "location where direct healthcare activities are performed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "data",
+      "kind": "class",
+      "label": "data",
+      "detail": "reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "social record extract",
+      "kind": "class",
+      "label": "social record extract",
+      "detail": "part or all of a social record extracted for the purpose of communication",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "episode of care",
+      "kind": "class",
+      "label": "episode of care",
+      "detail": "health related period during which healthcare activities are performed to address one health issue as identified by one healthcare professional",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "health condition evolution",
+      "kind": "class",
+      "label": "health condition evolution",
+      "detail": "health thread showing the evolution of health conditions during a healthcare process, starting with the health condition that represents the input health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "core care plan",
+      "kind": "class",
+      "label": "core care plan",
+      "detail": "care plan with reusable content addressing one or more specified health circumstances",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "healthcare process evaluation",
+      "kind": "class",
+      "label": "healthcare process evaluation",
+      "detail": "healthcare evaluation where healthcare processes are systematically assessed against requirements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare activity element",
+      "kind": "class",
+      "label": "healthcare activity element",
+      "detail": "element of healthcare activity that addresses one type of purpose",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare needs assessment",
+      "kind": "class",
+      "label": "healthcare needs assessment",
+      "detail": "healthcare assessment during which a healthcare professional considers a subject of care’s health need and determines the needed healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare actor",
+      "kind": "class",
+      "label": "healthcare actor",
+      "detail": "organization or person participating in healthcare",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "concept",
+      "kind": "class",
+      "label": "concept",
+      "detail": "unit of knowledge created by a unique combination of characteristics",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "electronic health record",
+      "kind": "class",
+      "label": "electronic health record ",
+      "detail": "health record where all information is stored on electronic media",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "time value",
+      "kind": "class",
+      "label": "TIME",
+      "detail": "data value used for representing a time of day, without relating it to a particular day",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "information",
+      "kind": "class",
+      "label": "information",
+      "detail": "knowledge concerning objects that within a certain context has a particular meaning",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "self care performer",
+      "kind": "class",
+      "label": "self-care performer",
+      "detail": "role assumed by the subject of care when they perform self-care.",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "attestation information",
+      "kind": "class",
+      "label": "ATTESTATION_INFO",
+      "detail": "base component documenting the details of an attestation of a set of electronic health record components",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "sharable data repository",
+      "kind": "class",
+      "label": "sharable data repository",
+      "detail": "data repository containing exclusively electronic health record extracts, accessible for duly authorized healthcare actors independent of their organizational affiliation and placed under the custody of a healthcare actor",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "unintended event",
+      "kind": "class",
+      "label": "unintended event",
+      "detail": "phenomenon that is not part of the normal course of a process but might influence it   ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "output",
+      "kind": "class",
+      "label": "output",
+      "detail": "result of a process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "social care communication",
+      "kind": "class",
+      "label": "social care communication",
+      "detail": "social care activity element where at least two healthcare actors communicate",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "medium",
+      "kind": "class",
+      "label": "medium",
+      "detail": "material on which data is stored (e.g., a magnetic disk)",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "working diagnosis",
+      "kind": "class",
+      "label": "working diagnosis",
+      "detail": "considered condition that one or more healthcare professionals have determined to be the most consistent with the currently known observed conditions",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "demographic item",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_ITEM",
+      "detail": "abstract structure component that holds all properties common for demographic clusters and demographic elements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "information model",
+      "kind": "class",
+      "label": "information model",
+      "detail": "formal model of a bounded set of facts, concepts or instructions to meet a specified requirement",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "uniprofessional care plan",
+      "kind": "class",
+      "label": "uniprofessional care plan",
+      "detail": "care plan limited to those healthcare provider activities performed by healthcare professionals having the same healthcare professional entitlement",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "demographic extract",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_EXTRACT",
+      "detail": "demographic information extracted for the purpose of being included in an EHR extract or an EHR audit log extract",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "electronic social record extract",
+      "kind": "class",
+      "label": "electronic social record extract",
+      "detail": "social record extract consisting solely of electronic record components",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "system of concepts",
+      "kind": "class",
+      "label": "system of concepts",
+      "detail": "set of concepts (3.2.1) structured according to the relations among them",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "non-ratified healthcare information",
+      "kind": "class",
+      "label": "non-ratified healthcare information",
+      "detail": "healthcare information the relevance of which has not been assessed and explicitly stated as valid by a healthcare professional",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "folder",
+      "kind": "class",
+      "label": "FOLDER",
+      "detail": "structure component used for creating hierarchical structures within an EHR extract and with compositions as leaf nodes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "prescribed third party activity",
+      "kind": "class",
+      "label": "prescribed third party activity",
+      "detail": "healthcare third party activity prescribed by a healthcare professional",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "commitment",
+      "kind": "class",
+      "label": "commitment",
+      "detail": "obligation by one or more of the participants in an act to comply with a rule or perform a contract",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "product",
+      "kind": "class",
+      "label": "product",
+      "detail": "output of an organization that can be produced without any transaction taking place between the organization and the customer",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare information for import",
+      "kind": "class",
+      "label": "healthcare information for import",
+      "detail": "healthcare information that is a candidate for import into a professional health record after a healthcare professional has confirmed its clinical relevance to that professional health record",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "clinical process",
+      "kind": "class",
+      "label": "clinical process",
+      "detail": "healthcare process encompassing all healthcare provider activities and other prescribed healthcare activities that addresses identified or specified health circumstances",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "health condition",
+      "kind": "class",
+      "label": "health condition",
+      "detail": "observed or potentially observable aspects of the health state at a given time",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "clinical process outcome evaluation",
+      "kind": "class",
+      "label": "clinical process outcome evaluation",
+      "detail": "healthcare process evaluation where the effects of a clinical process on a health state are assessed comparing the resultant condition to the target condition",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "date value",
+      "kind": "class",
+      "label": "DATE",
+      "detail": "data value used for representing a point in time with a resolution of day of month",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "input health state",
+      "kind": "class",
+      "label": "input health state",
+      "detail": "health state at the initiation of healthcare process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "health thread",
+      "kind": "class",
+      "label": "health thread",
+      "detail": "defined association between healthcare circumstances as determined by one or more healthcare actors",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "health condition delay",
+      "kind": "class",
+      "label": "health condition delay",
+      "detail": "healthcare activity delay caused by a health condition ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "data value",
+      "kind": "class",
+      "label": "DATA_VALUE",
+      "detail": "data contained in an element",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare resource",
+      "kind": "class",
+      "label": "healthcare resource",
+      "detail": "resource needed to perform healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 4
+    },
+    {
+      "id": "quality control",
+      "kind": "class",
+      "label": "quality control",
+      "detail": "part of quality management focused on fulfilling quality requirements",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "electronic health record extract",
+      "kind": "class",
+      "label": "electronic health record extract",
+      "detail": "health record extract consisting solely of electronic record components",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "automated healthcare",
+      "kind": "class",
+      "label": "automated healthcare",
+      "detail": "method of delivering healthcare initiated by a responsible healthcare actor and thereafter delivered automatically by an automatic medical device",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "contact period",
+      "kind": "class",
+      "label": "contact period",
+      "detail": "healthcare activity period during which a contact occurs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "role",
+      "kind": "class",
+      "label": "role",
+      "detail": "set of competencies and/or performances that are associated with a task",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "coded value",
+      "kind": "class",
+      "label": "CODED_VALUE",
+      "detail": "data value used for representing a code in a referenced code system",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "health circumstance",
+      "kind": "class",
+      "label": "health circumstance",
+      "detail": "circumstance contributing to the health state of a person",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "indirect healthcare activity period",
+      "kind": "class",
+      "label": "indirect healthcare activity period",
+      "detail": "healthcare activity period without the involvement of the subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "base component",
+      "kind": "class",
+      "label": "BASE_COMPONENT",
+      "detail": "abstract class that include the properties common for all revisable classes included in EHR extract",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "individual care plan",
+      "kind": "class",
+      "label": "individual care plan",
+      "detail": "dynamic, personalized plan including identified needed eligible social care activity, health objectives and healthcare goals, relating to one or more specified social needs in a healthcare process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "health condition period",
+      "kind": "class",
+      "label": "health state period",
+      "detail": "health related period during which a health condition has been observed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "healthcare third party",
+      "kind": "class",
+      "label": "healthcare third party",
+      "detail": "healthcare actor other than a healthcare provider or the subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "demographic folder",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_FOLDER",
+      "detail": "structure component used for creating hierarchical structures within a demographic extract and with demographic entities as leaf nodes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "prescribed self-care",
+      "kind": "class",
+      "label": "prescribed self-care",
+      "detail": "self-care activity prescribed by a healthcare professional",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare administration",
+      "kind": "class",
+      "label": "healthcare administration",
+      "detail": "administrative activities related to healthcare processes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "quality management",
+      "kind": "class",
+      "label": "quality management",
+      "detail": "management with regard to quality",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "event",
+      "kind": "class",
+      "label": "event",
+      "detail": "something that happens or is regarded as happening",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "summarized healthcare information repository",
+      "kind": "class",
+      "label": "summarized healthcare information repository",
+      "detail": "data repository containing summarized information for healthcare coordination and the continuity of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "social care needs assessment",
+      "kind": "class",
+      "label": "social care needs assessment",
+      "detail": "healthcare needs assessment during which a healthcare professional considers a subject of care’s social need and determines the needed eligible social care activity",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "professionally assessed condition",
+      "kind": "class",
+      "label": "professionally assessed condition",
+      "detail": "observed condition assessed by a healthcare professional concerning the genesis, the course, the severity or the impact of the health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "third party care performer",
+      "kind": "class",
+      "label": "third party care performer",
+      "detail": "role taken by care third party when performing care.",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "demographic cluster",
+      "kind": "class",
+      "label": "DEMOGRAPHIC_CLUSTER",
+      "detail": "structure component used for creating hierarchical structures within an demographic entry and with demographic elements as leaf nodes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "professional health record",
+      "kind": "class",
+      "label": "professional health record",
+      "detail": "health record held under the responsibility of one healthcare provider and maintained by one or several healthcare professionals ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "coded simple value",
+      "kind": "class",
+      "label": "CODED_SIMPLE",
+      "detail": "data value used for representing a code in a code system implied and fixed by the context in which this data value occurs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "social care analysis",
+      "kind": "class",
+      "label": "social care analysis",
+      "detail": "social care activity element with the intention to analyse one or more social conditions of a subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "organization role",
+      "kind": "class",
+      "label": "organization role",
+      "detail": "structural role of an organization",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "adverse event",
+      "kind": "class",
+      "label": "adverse event",
+      "detail": "unintended event that has negative influence upon healthcare processes",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "subject of care",
+      "kind": "class",
+      "label": "subject of care",
+      "detail": "person who is seeking to receive, is receiving, or who has received healthcare",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "real value",
+      "kind": "class",
+      "label": "REAL",
+      "detail": "data value used for representing a rational number",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "prognostic condition",
+      "kind": "class",
+      "label": "prognostic condition",
+      "detail": "potential health condition representing the expected course of a health state as assessed by healthcare professionals",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "content",
+      "kind": "class",
+      "label": "CONTENT",
+      "detail": "abstract structure component that holds all properties common for sections and entries",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "health record extract",
+      "kind": "class",
+      "label": "health record extract",
+      "detail": "part or all of a health record extracted for the purpose of communication",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare third party activity",
+      "kind": "class",
+      "label": "healthcare third party activity",
+      "detail": "healthcare activity performed by a healthcare third party ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "activity",
+      "kind": "class",
+      "label": "activity",
+      "detail": "smallest identified element of work in a process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare activity period element",
+      "kind": "class",
+      "label": "healthcare activity period element",
+      "detail": "part of a healthcare activity period during which one health issue is specifically addressed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "potential health condition",
+      "kind": "class",
+      "label": "potential health condition",
+      "detail": "possible future or current health condition described by a healthcare actor",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "healthcare data",
+      "kind": "class",
+      "label": "healthcare data",
+      "detail": "data produced during healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "process model",
+      "kind": "class",
+      "label": "process model",
+      "detail": "representation of a process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 6
+    },
+    {
+      "id": "healthcare planning",
+      "kind": "class",
+      "label": "healthcare planning",
+      "detail": "element of healthcare activity management where a care plan is managed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "healthcare activity directory",
+      "kind": "class",
+      "label": "healthcare activity directory",
+      "detail": "directory of the healthcare activities offered by a healthcare provider",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare treatment",
+      "kind": "class",
+      "label": "healthcare treatment",
+      "detail": "healthcare activity element intended to directly improve or maintain a health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "healthcare quality management",
+      "kind": "class",
+      "label": "healthcare quality management",
+      "detail": "coordinated activities to direct and control a healthcare organization with regard to quality",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "health state",
+      "kind": "class",
+      "label": "health state",
+      "detail": "physical and mental functions, body structure, personal factors, activity, participation and environmental aspects as the composite health of a person",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 1
+    },
+    {
+      "id": "healthcare professional",
+      "kind": "class",
+      "label": "healthcare professional",
+      "detail": "healthcare personnel having a healthcare professional entitlement recognized in a given jurisdiction",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "term",
+      "kind": "class",
+      "label": "term",
+      "detail": "verbal designation of a general concept in a specific subject field",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 2
+    },
+    {
+      "id": "adverse event management",
+      "kind": "class",
+      "label": "adverse event management",
+      "detail": "set of healthcare activities performed in response to an adverse event",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 9
+    },
+    {
+      "id": "URI value",
+      "kind": "class",
+      "label": "URI",
+      "detail": "data value used for identifying uniform resource according to the specifications in IETF RFC 2396",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "healthcare employment",
+      "kind": "class",
+      "label": "healthcare employment",
+      "detail": "contractual framework between a healthcare personnel and a healthcare organization describing the roles and responsibilities assigned to that healthcare personnel",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 3
+    },
+    {
+      "id": "reason for demand for care",
+      "kind": "class",
+      "label": "reason for request for care",
+      "detail": "subject of care or a subject of care proxy's perception of health needs motivating a request for care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "discharge report",
+      "kind": "class",
+      "label": "discharge report",
+      "detail": "clinical report concerning a completed, mandated period of care ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 12
+    },
+    {
+      "id": "healthcare documenting",
+      "kind": "class",
+      "label": "healthcare documenting",
+      "detail": "healthcare activity element where health records are created or maintained",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "boolean value",
+      "kind": "class",
+      "label": "BOOLEAN",
+      "detail": "data value used for representing the values of two-valued logic",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "healthcare activity management",
+      "kind": "class",
+      "label": "healthcare activity management",
+      "detail": "healthcare activity element during which the status of healthcare activities in a care plan are changed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "date time value",
+      "kind": "class",
+      "label": "DATE_TIME",
+      "detail": "data value used for representing a precise point in time with a resolution of second and optionally fraction of second",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 13
+    },
+    {
+      "id": "healthcare activity",
+      "kind": "class",
+      "label": "healthcare activity",
+      "detail": "activity intended to improve or maintain a health state ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "resultant condition",
+      "kind": "class",
+      "label": "resultant condition",
+      "detail": "observed condition representing an output health state",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 0
+    },
+    {
+      "id": "social care documenting",
+      "kind": "class",
+      "label": "social care documenting",
+      "detail": "social care activity element where social records are created or maintained",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 11
+    },
+    {
+      "id": "healthcare activity mandate",
+      "kind": "class",
+      "label": "healthcare activity mandate",
+      "detail": "healthcare mandate assigning the right and obligation to perform specific healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "healthcare evaluation",
+      "kind": "class",
+      "label": "healthcare evaluation",
+      "detail": "healthcare activity element where aspects of at least one other healthcare activity element are evaluated",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "clinical process episode",
+      "kind": "class",
+      "label": "clinical process episode",
+      "detail": "health related period that includes all healthcare activity periods in one clinical process",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "informed consent",
+      "kind": "class",
+      "label": "informed consent",
+      "detail": "permission to perform healthcare activities, voluntarily given by a subject of care with consent competence or by a subject of care proxy with consent competence, after having been informed about the purpose and the possible results of the healthcare activities",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 10
+    },
+    {
+      "id": "subject of care preference delay",
+      "kind": "class",
+      "label": "subject of care preference delay",
+      "detail": "healthcare activity delay by the preference of the subject of care",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 7
+    },
+    {
+      "id": "self-care activity",
+      "kind": "class",
+      "label": "self-care activity",
+      "detail": "healthcare activity performed by the subject of care ",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    },
+    {
+      "id": "health objective",
+      "kind": "class",
+      "label": "intended outcome",
+      "detail": "desired ultimate achievement of a healthcare process addressing health needs",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 8
+    },
+    {
+      "id": "healthcare activity assessment",
+      "kind": "class",
+      "label": "health activity assessment",
+      "detail": "healthcare activity element where an opinion related to a healthcare activity is formed",
+      "childLinks": [],
+      "collapsed": true,
+      "group": 5
+    }
+  ],
+  "links": [
+    {
+      "source": "person role",
+      "target": "person",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "healthcare",
+      "target": "subject of care",
+      "value": 1,
+      "label": "seeks to receive, is receiving, or has received"
+    },
+    {
+      "source": "healthcare",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "provides"
+    },
+    {
+      "source": "healthcare",
+      "target": "continuity of care",
+      "value": 1,
+      "label": "relates to the delivering of"
+    },
+    {
+      "source": "healthcare",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "participates in"
+    },
+    {
+      "source": "healthcare",
+      "target": "healthcare funds",
+      "value": 1,
+      "label": "is financed by"
+    },
+    {
+      "source": "healthcare",
+      "target": "health",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "observed condition",
+      "target": "healthcare investigation",
+      "value": 1,
+      "label": "reveals"
+    },
+    {
+      "source": "observed condition",
+      "target": "excluded condition",
+      "value": 1,
+      "label": "is not consistent with"
+    },
+    {
+      "source": "observed condition",
+      "target": "working diagnosis",
+      "value": 1,
+      "label": "is consistent with"
+    },
+    {
+      "source": "observed condition",
+      "target": "health state",
+      "value": 1,
+      "label": "is observed as"
+    },
+    {
+      "source": "observed condition",
+      "target": "considered condition",
+      "value": 1,
+      "label": "is based on"
+    },
+    {
+      "source": "observed condition",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "has observed"
+    },
+    {
+      "source": "observed condition",
+      "target": "health condition period",
+      "value": 1,
+      "label": "has been observed during"
+    },
+    {
+      "source": "structure component",
+      "target": "extracted component set",
+      "value": 1,
+      "label": "extracted component set"
+    },
+    {
+      "source": "structure component",
+      "target": "link",
+      "value": 1,
+      "label": "link"
+    },
+    {
+      "source": "structure component",
+      "target": "attestation information",
+      "value": 1,
+      "label": "attestation information"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "healthcare activity period element",
+      "value": 1,
+      "label": "healthcare activity period element"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "health record",
+      "value": 1,
+      "label": "is accessed during"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "mandated period of care"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "is performed during"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "clinical process episode",
+      "value": 1,
+      "label": "clinical process episode"
+    },
+    {
+      "source": "healthcare activity period",
+      "target": "healthcare appointment",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "professional health record",
+      "value": 1,
+      "label": "is responsible for professional health record"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "is able to be assigned"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "healthcare resource management",
+      "value": 1,
+      "label": "performs healthcare resource management"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "demand for care",
+      "value": 1,
+      "label": "accepts or denies"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "has care period mandate for"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "is responsible for mandated period of care"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "healthcare commitment",
+      "value": 1,
+      "label": "states"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "demand for care",
+      "value": 1,
+      "label": "receives"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "healthcare",
+      "value": 1,
+      "label": "provides"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "episode of care",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "initial contact",
+      "value": 1,
+      "label": "arranges"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "resource delay",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "healthcare provider",
+      "target": "healthcare activity directory",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "demand mandate",
+      "target": "mandate to export personal information",
+      "value": 1,
+      "label": "permits"
+    },
+    {
+      "source": "demand mandate",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "demand mandate",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "gives way to"
+    },
+    {
+      "source": "demand mandate",
+      "target": "continuity facilitator mandate",
+      "value": 1,
+      "label": "permits continuity facilitator mandate"
+    },
+    {
+      "source": "demand mandate",
+      "target": "demand for care",
+      "value": 1,
+      "label": "justifies"
+    },
+    {
+      "source": "electronic patient summary",
+      "target": "summarized healthcare information repository",
+      "value": 1,
+      "label": "summarized healthcare information repository"
+    },
+    {
+      "source": "electronic health record component",
+      "target": "attestation information",
+      "value": 1,
+      "label": "target"
+    },
+    {
+      "source": "electronic health record component",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "electronic health record extract"
+    },
+    {
+      "source": "demographic entity",
+      "target": "demographic folder",
+      "value": 1,
+      "label": "demographic folder"
+    },
+    {
+      "source": "demographic entity",
+      "target": "demographic item",
+      "value": 1,
+      "label": "demographic item"
+    },
+    {
+      "source": "care plan",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "complies with"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "applies"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "targets"
+    },
+    {
+      "source": "care plan",
+      "target": "health objective",
+      "value": 1,
+      "label": "targets health objective"
+    },
+    {
+      "source": "care plan",
+      "target": "health issue",
+      "value": 1,
+      "label": "addresses health issue"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare planning",
+      "value": 1,
+      "label": "is result of"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare activity management",
+      "value": 1,
+      "label": "changes statuses of  healthcare activities in"
+    },
+    {
+      "source": "care plan",
+      "target": "protocol",
+      "value": 1,
+      "label": "implements"
+    },
+    {
+      "source": "care plan",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "care plan",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan care plan"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare activities bundle",
+      "value": 1,
+      "label": "healthcare activities bundle"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare appointment",
+      "value": 1,
+      "label": "is scheduled in"
+    },
+    {
+      "source": "care plan",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is planned in"
+    },
+    {
+      "source": "care plan",
+      "target": "core care plan",
+      "value": 1,
+      "label": "is based upon"
+    },
+    {
+      "source": "care plan",
+      "target": "health thread",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "care plan",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan"
+    },
+    {
+      "source": "personal health record",
+      "target": "subject of care",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "personal health record",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "maintains subject of care proxy"
+    },
+    {
+      "source": "initial contact",
+      "target": "clinical process",
+      "value": 1,
+      "label": "establishes"
+    },
+    {
+      "source": "initial contact",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "arranges"
+    },
+    {
+      "source": "initial contact",
+      "target": "demand for initial contact",
+      "value": 1,
+      "label": "results in"
+    },
+    {
+      "source": "self-care period",
+      "target": "prescribed self-care",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "element",
+      "target": "data value",
+      "value": 1,
+      "label": "data value"
+    },
+    {
+      "source": "healthcare activities bundle",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan"
+    },
+    {
+      "source": "healthcare activities bundle",
+      "target": "healthcare activities bundle",
+      "value": 1,
+      "label": "healthcare activities bundle"
+    },
+    {
+      "source": "healthcare activities bundle",
+      "target": "healthcare activities bundle",
+      "value": 1,
+      "label": "healthcare activities bundle healthcare activities bundle"
+    },
+    {
+      "source": "healthcare activities bundle",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "cluster",
+      "target": "item",
+      "value": 1,
+      "label": "item"
+    },
+    {
+      "source": "continuity facilitator mandate",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "applies to"
+    },
+    {
+      "source": "continuity facilitator mandate",
+      "target": "health thread",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "continuity facilitator mandate",
+      "target": "demand mandate",
+      "value": 1,
+      "label": "permits"
+    },
+    {
+      "source": "healthcare information request",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "receives"
+    },
+    {
+      "source": "healthcare information request",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "sends out"
+    },
+    {
+      "source": "healthcare information request",
+      "target": "health record extract",
+      "value": 1,
+      "label": "is topic for"
+    },
+    {
+      "source": "demographic element",
+      "target": "data value",
+      "value": 1,
+      "label": "data value"
+    },
+    {
+      "source": "health concern",
+      "target": "health thread",
+      "value": 1,
+      "label": "delineates"
+    },
+    {
+      "source": "continuity of care",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is involved in"
+    },
+    {
+      "source": "continuity of care",
+      "target": "healthcare",
+      "value": 1,
+      "label": "relates to the delivering of"
+    },
+    {
+      "source": "continuity of care",
+      "target": "information",
+      "value": 1,
+      "label": "is shared during"
+    },
+    {
+      "source": "health record component",
+      "target": "certificate related to a healthcare matter",
+      "value": 1,
+      "label": "certificate related to a healthcare matter"
+    },
+    {
+      "source": "health record component",
+      "target": "health record component",
+      "value": 1,
+      "label": "health record component health record component"
+    },
+    {
+      "source": "health record component",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "is used as label for"
+    },
+    {
+      "source": "health record component",
+      "target": "health record",
+      "value": 1,
+      "label": "health record"
+    },
+    {
+      "source": "health record component",
+      "target": "health record component",
+      "value": 1,
+      "label": "health record component"
+    },
+    {
+      "source": "health record component",
+      "target": "health record extract",
+      "value": 1,
+      "label": "health record extract"
+    },
+    {
+      "source": "contact",
+      "target": "healthcare appointment",
+      "value": 1,
+      "label": "is appointment for"
+    },
+    {
+      "source": "contact",
+      "target": "referral",
+      "value": 1,
+      "label": "initiates"
+    },
+    {
+      "source": "contact",
+      "target": "contact period",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "contact",
+      "target": "subject of care",
+      "value": 1,
+      "label": "participates in"
+    },
+    {
+      "source": "contact",
+      "target": "healthcare personnel",
+      "value": 1,
+      "label": "participates in healthcare personnel"
+    },
+    {
+      "source": "knowledge",
+      "target": "concept",
+      "value": 1,
+      "label": "is a unit of"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "demand for care",
+      "value": 1,
+      "label": "concerns demand for care"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "health record extract",
+      "value": 1,
+      "label": "is used as label for health record extract"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "health record component",
+      "value": 1,
+      "label": "is used as label for"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "subject of care",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "identifies or states"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "mandate to export personal information",
+      "value": 1,
+      "label": "has topic mandate to export personal information"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "certificate related to a healthcare matter",
+      "value": 1,
+      "label": "attests"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "demand mandate",
+      "value": 1,
+      "label": "has topic demand mandate"
+    },
+    {
+      "source": "healthcare matter",
+      "target": "health thread",
+      "value": 1,
+      "label": "links"
+    },
+    {
+      "source": "deprecated term",
+      "target": "concept",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "healthcare activity mandate",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "demand for care",
+      "value": 1,
+      "label": "asks for"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "authorizes"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "healthcare information for import",
+      "value": 1,
+      "label": "generates"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "health issue",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare provider activity",
+      "target": "healthcare activity directory",
+      "value": 1,
+      "label": "includes"
+    },
+    {
+      "source": "healthcare service directory",
+      "target": "healthcare service",
+      "value": 1,
+      "label": "is listed in"
+    },
+    {
+      "source": "healthcare professional entitlement",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "healthcare commitment",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare commitment",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "states"
+    },
+    {
+      "source": "healthcare commitment",
+      "target": "referral",
+      "value": 1,
+      "label": "asks for"
+    },
+    {
+      "source": "healthcare commitment",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "relates to the provision of"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "assigns"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare commitment",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "regulates"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "authorization by law",
+      "value": 1,
+      "label": "requires authorization by law"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "objection",
+      "value": 1,
+      "label": "limits"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "health record",
+      "value": 1,
+      "label": "implies access to"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "derives from healthcare mandate"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "subject of care",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "informed consent",
+      "value": 1,
+      "label": "requires informed consent"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "subject of care desire",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "derives from"
+    },
+    {
+      "source": "healthcare mandate",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is assigned to"
+    },
+    {
+      "source": "health need",
+      "target": "needed healthcare activity",
+      "value": 1,
+      "label": "addresses needed healthcare activity"
+    },
+    {
+      "source": "health need",
+      "target": "healthcare needs assessment",
+      "value": 1,
+      "label": "is considered during"
+    },
+    {
+      "source": "health need",
+      "target": "health state",
+      "value": 1,
+      "label": "is  deficit in"
+    },
+    {
+      "source": "health need",
+      "target": "reason for demand for care",
+      "value": 1,
+      "label": "is background for"
+    },
+    {
+      "source": "health need",
+      "target": "subject of care",
+      "value": 1,
+      "label": "has or has had"
+    },
+    {
+      "source": "health need",
+      "target": "health objective",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "audit information",
+      "target": "base component",
+      "value": 1,
+      "label": "base component"
+    },
+    {
+      "source": "demand for initial contact",
+      "target": "initial contact",
+      "value": 1,
+      "label": "results in"
+    },
+    {
+      "source": "referral",
+      "target": "healthcare commitment",
+      "value": 1,
+      "label": "asks for"
+    },
+    {
+      "source": "referral",
+      "target": "contact",
+      "value": 1,
+      "label": "initiates"
+    },
+    {
+      "source": "referral",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "issues"
+    },
+    {
+      "source": "clinical guideline",
+      "target": "healthcare planning",
+      "value": 1,
+      "label": "is based upon"
+    },
+    {
+      "source": "clinical guideline",
+      "target": "health issue",
+      "value": 1,
+      "label": "is centred on"
+    },
+    {
+      "source": "clinical guideline",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "makes decisions assisted by"
+    },
+    {
+      "source": "clinical guideline",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "complies with"
+    },
+    {
+      "source": "clinical guideline",
+      "target": "clinical pathway",
+      "value": 1,
+      "label": "refers to"
+    },
+    {
+      "source": "next of kin",
+      "target": "subject of care",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "link",
+      "target": "base component",
+      "value": 1,
+      "label": "target"
+    },
+    {
+      "source": "link",
+      "target": "structure component",
+      "value": 1,
+      "label": "structure component"
+    },
+    {
+      "source": "link",
+      "target": "base component",
+      "value": 1,
+      "label": "source"
+    },
+    {
+      "source": "subject of care desire",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "subject of care desire",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "expresses subject of care proxy"
+    },
+    {
+      "source": "subject of care desire",
+      "target": "subject of care",
+      "value": 1,
+      "label": "expresses"
+    },
+    {
+      "source": "subject of care desire",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "subject of care desire",
+      "target": "healthcare needs assessment",
+      "value": 1,
+      "label": "is considered during"
+    },
+    {
+      "source": "target condition",
+      "target": "health objective",
+      "value": 1,
+      "label": "represents"
+    },
+    {
+      "source": "target condition",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "represents healthcare goal"
+    },
+    {
+      "source": "target condition",
+      "target": "clinical process outcome evaluation",
+      "value": 1,
+      "label": "is input to"
+    },
+    {
+      "source": "healthcare funds",
+      "target": "healthcare",
+      "value": 1,
+      "label": "is financed by"
+    },
+    {
+      "source": "healthcare funds",
+      "target": "healthcare resource",
+      "value": 1,
+      "label": "is funding"
+    },
+    {
+      "source": "healthcare funds",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "provides"
+    },
+    {
+      "source": "synonym",
+      "target": "concept",
+      "value": 1,
+      "label": "designates"
+    },
+    {
+      "source": "synonym",
+      "target": "term",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "mandate to export personal information",
+      "target": "demand mandate",
+      "value": 1,
+      "label": "permits"
+    },
+    {
+      "source": "mandate to export personal information",
+      "target": "health record extract",
+      "value": 1,
+      "label": "implies the right  to communicate"
+    },
+    {
+      "source": "mandate to export personal information",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "healthcare service",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "commissions"
+    },
+    {
+      "source": "healthcare service",
+      "target": "healthcare service directory",
+      "value": 1,
+      "label": "is listed in"
+    },
+    {
+      "source": "healthcare service",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is the result of"
+    },
+    {
+      "source": "clinical pathway",
+      "target": "core care plan",
+      "value": 1,
+      "label": "informs"
+    },
+    {
+      "source": "clinical pathway",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "refers to"
+    },
+    {
+      "source": "clinical pathway",
+      "target": "health condition",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "clinical pathway",
+      "target": "health condition",
+      "value": 1,
+      "label": "governs the choice of"
+    },
+    {
+      "source": "healthcare personnel",
+      "target": "contact",
+      "value": 1,
+      "label": "participates in"
+    },
+    {
+      "source": "healthcare personnel",
+      "target": "healthcare organization",
+      "value": 1,
+      "label": "healthcare organization"
+    },
+    {
+      "source": "excluded condition",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "has ruled out"
+    },
+    {
+      "source": "excluded condition",
+      "target": "observed condition",
+      "value": 1,
+      "label": "is not consistent with"
+    },
+    {
+      "source": "output health state",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "has output"
+    },
+    {
+      "source": "output health state",
+      "target": "resultant condition",
+      "value": 1,
+      "label": "is observed as"
+    },
+    {
+      "source": "healthcare activity delay",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "mandated period of care"
+    },
+    {
+      "source": "objection",
+      "target": "consent competence",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "objection",
+      "target": "subject of care",
+      "value": 1,
+      "label": "states"
+    },
+    {
+      "source": "objection",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "limits"
+    },
+    {
+      "source": "objection",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "states subject of care proxy"
+    },
+    {
+      "source": "person",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is"
+    },
+    {
+      "source": "person",
+      "target": "person role",
+      "value": 1,
+      "label": "has person role"
+    },
+    {
+      "source": "person",
+      "target": "health",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "consent competence",
+      "target": "subject of care",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "consent competence",
+      "target": "objection",
+      "value": 1,
+      "label": "requires dissent"
+    },
+    {
+      "source": "consent competence",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "has subject of care proxy"
+    },
+    {
+      "source": "consent competence",
+      "target": "informed consent",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "resource delay",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "health related period",
+      "target": "health related period",
+      "value": 1,
+      "label": "health related period"
+    },
+    {
+      "source": "health related period",
+      "target": "health related period",
+      "value": 1,
+      "label": "health related period health related period"
+    },
+    {
+      "source": "considered condition",
+      "target": "observed condition",
+      "value": 1,
+      "label": "is based on"
+    },
+    {
+      "source": "health approach",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "health",
+      "target": "healthcare",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "health",
+      "target": "person",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "entry",
+      "target": "demographic item",
+      "value": 1,
+      "label": "demographic item"
+    },
+    {
+      "source": "entry",
+      "target": "item",
+      "value": 1,
+      "label": "item"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "commissions"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "healthcare activity delay",
+      "value": 1,
+      "label": "healthcare activity delay"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "clinical process",
+      "value": 1,
+      "label": "includes"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "healthcare activity period"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "professional health record",
+      "value": 1,
+      "label": "is documented in"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "has care period mandate for"
+    },
+    {
+      "source": "mandated period of care",
+      "target": "discharge report",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "protocol",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "implements"
+    },
+    {
+      "source": "organization",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is"
+    },
+    {
+      "source": "episodes of care bundle",
+      "target": "episode of care",
+      "value": 1,
+      "label": "episode of care"
+    },
+    {
+      "source": "episodes of care bundle",
+      "target": "health thread",
+      "value": 1,
+      "label": "delineates"
+    },
+    {
+      "source": "healthcare resource management",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare resource management",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare resource management",
+      "target": "healthcare resource",
+      "value": 1,
+      "label": "direct and control  the supply and use of"
+    },
+    {
+      "source": "care period mandate",
+      "target": "demand for care",
+      "value": 1,
+      "label": "triggers"
+    },
+    {
+      "source": "care period mandate",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "authorizes"
+    },
+    {
+      "source": "care period mandate",
+      "target": "healthcare service",
+      "value": 1,
+      "label": "commissions healthcare service"
+    },
+    {
+      "source": "care period mandate",
+      "target": "demand mandate",
+      "value": 1,
+      "label": "gives way to"
+    },
+    {
+      "source": "care period mandate",
+      "target": "continuity facilitator mandate",
+      "value": 1,
+      "label": "applies to"
+    },
+    {
+      "source": "care period mandate",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "is able to be assigned"
+    },
+    {
+      "source": "care period mandate",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "commissions"
+    },
+    {
+      "source": "care period mandate",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "composition",
+      "target": "content",
+      "value": 1,
+      "label": "content"
+    },
+    {
+      "source": "composition",
+      "target": "folder",
+      "value": 1,
+      "label": "folder"
+    },
+    {
+      "source": "automatic medical device",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "delivers"
+    },
+    {
+      "source": "extracted component set",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "electronic health record extract"
+    },
+    {
+      "source": "extracted component set",
+      "target": "structure component",
+      "value": 1,
+      "label": "structure component"
+    },
+    {
+      "source": "extracted component set",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "electronic health record extract electronic health record extract"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare service",
+      "value": 1,
+      "label": "is the result of"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare administration",
+      "value": 1,
+      "label": "is supporting"
+    },
+    {
+      "source": "healthcare process",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "is planned in"
+    },
+    {
+      "source": "healthcare process",
+      "target": "output health state",
+      "value": 1,
+      "label": "has output"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "healthcare process healthcare process"
+    },
+    {
+      "source": "healthcare process",
+      "target": "subject of care",
+      "value": 1,
+      "label": "is performed for"
+    },
+    {
+      "source": "healthcare process",
+      "target": "input health state",
+      "value": 1,
+      "label": "is input to"
+    },
+    {
+      "source": "healthcare process",
+      "target": "adverse event",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare process evaluation",
+      "value": 1,
+      "label": "evaluates"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "regulates"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare quality management",
+      "value": 1,
+      "label": "controls quality of"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare quality management",
+      "value": 1,
+      "label": "provides feedback to"
+    },
+    {
+      "source": "healthcare process",
+      "target": "health record",
+      "value": 1,
+      "label": "is documented in"
+    },
+    {
+      "source": "healthcare process",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "healthcare process"
+    },
+    {
+      "source": "authorization by law",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "item",
+      "target": "cluster",
+      "value": 1,
+      "label": "cluster"
+    },
+    {
+      "source": "item",
+      "target": "entry",
+      "value": 1,
+      "label": "entry"
+    },
+    {
+      "source": "healthcare appointment",
+      "target": "contact",
+      "value": 1,
+      "label": "is appointment for"
+    },
+    {
+      "source": "healthcare appointment",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "healthcare appointment",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "is scheduled in"
+    },
+    {
+      "source": "section",
+      "target": "content",
+      "value": 1,
+      "label": "content"
+    },
+    {
+      "source": "healthcare organization",
+      "target": "healthcare personnel",
+      "value": 1,
+      "label": "healthcare personnel"
+    },
+    {
+      "source": "healthcare organization",
+      "target": "core care plan",
+      "value": 1,
+      "label": "adopts"
+    },
+    {
+      "source": "healthcare organization",
+      "target": "healthcare quality management",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "personal health record",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "subject of care desire",
+      "value": 1,
+      "label": "expresses"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "reason for demand for care",
+      "value": 1,
+      "label": "is expressed by"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "consent competence",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "objection",
+      "value": 1,
+      "label": "states"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "informed consent",
+      "value": 1,
+      "label": "gives"
+    },
+    {
+      "source": "subject of care proxy",
+      "target": "subject of care",
+      "value": 1,
+      "label": "has the right to take decisions on behalf of"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "is recorded in healthcare mandate"
+    },
+    {
+      "source": "health record",
+      "target": "health record extract",
+      "value": 1,
+      "label": "is extracted from"
+    },
+    {
+      "source": "health record",
+      "target": "subject of care",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "is accessed during"
+    },
+    {
+      "source": "health record",
+      "target": "medium",
+      "value": 1,
+      "label": "is stored on"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is documented in"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "implies access to"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "is accessed during healthcare activity period"
+    },
+    {
+      "source": "health record",
+      "target": "health record component",
+      "value": 1,
+      "label": "health record component"
+    },
+    {
+      "source": "health record",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "is recorded in non-ratified healthcare information"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare documenting",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "health record",
+      "target": "subject of care desire",
+      "value": 1,
+      "label": "is recorded in subject of care desire"
+    },
+    {
+      "source": "health record",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "health record",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "is recorded in care plan"
+    },
+    {
+      "source": "healthcare goal",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "targets"
+    },
+    {
+      "source": "healthcare goal",
+      "target": "health objective",
+      "value": 1,
+      "label": "contributes to achievement of"
+    },
+    {
+      "source": "healthcare goal",
+      "target": "health approach",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "healthcare goal",
+      "target": "target condition",
+      "value": 1,
+      "label": "represents"
+    },
+    {
+      "source": "healthcare goal",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "targets care plan"
+    },
+    {
+      "source": "clinical process interest",
+      "target": "clinical process",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "needed healthcare activity",
+      "target": "health need",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "needed healthcare activity",
+      "target": "healthcare needs assessment",
+      "value": 1,
+      "label": "identifies"
+    },
+    {
+      "source": "request",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "issues"
+    },
+    {
+      "source": "health issue",
+      "target": "clinical process",
+      "value": 1,
+      "label": "addresses clinical process"
+    },
+    {
+      "source": "health issue",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "addresses care plan"
+    },
+    {
+      "source": "health issue",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "health issue",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "is centred on"
+    },
+    {
+      "source": "health issue",
+      "target": "episode of care",
+      "value": 1,
+      "label": "is centred on episode of care"
+    },
+    {
+      "source": "health issue",
+      "target": "healthcare activity period element",
+      "value": 1,
+      "label": "determines"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "asks for"
+    },
+    {
+      "source": "demand for care",
+      "target": "reason for demand for care",
+      "value": 1,
+      "label": "motivates"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "accepts or denies"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "demand for care",
+      "target": "demand mandate",
+      "value": 1,
+      "label": "justifies"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "expresses"
+    },
+    {
+      "source": "demand for care",
+      "target": "care period mandate",
+      "value": 1,
+      "label": "triggers"
+    },
+    {
+      "source": "demand for care",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "receives"
+    },
+    {
+      "source": "clinical report",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "receives"
+    },
+    {
+      "source": "clinical report",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "sends out"
+    },
+    {
+      "source": "clinical report",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "is received as"
+    },
+    {
+      "source": "healthcare investigation",
+      "target": "health state",
+      "value": 1,
+      "label": "clarifies"
+    },
+    {
+      "source": "healthcare investigation",
+      "target": "observed condition",
+      "value": 1,
+      "label": "reveals"
+    },
+    {
+      "source": "certificate related to a healthcare matter",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "attests"
+    },
+    {
+      "source": "certificate related to a healthcare matter",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is issued by"
+    },
+    {
+      "source": "certificate related to a healthcare matter",
+      "target": "health record component",
+      "value": 1,
+      "label": "health record component"
+    },
+    {
+      "source": "episode of care",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "episode of care",
+      "target": "health issue",
+      "value": 1,
+      "label": "is centred on"
+    },
+    {
+      "source": "episode of care",
+      "target": "healthcare activity period element",
+      "value": 1,
+      "label": "healthcare activity period element"
+    },
+    {
+      "source": "episode of care",
+      "target": "episodes of care bundle",
+      "value": 1,
+      "label": "episodes of care bundle"
+    },
+    {
+      "source": "health condition evolution",
+      "target": "input health state",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "health condition evolution",
+      "target": "health condition",
+      "value": 1,
+      "label": "shows the evolution of"
+    },
+    {
+      "source": "core care plan",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "is based upon"
+    },
+    {
+      "source": "core care plan",
+      "target": "clinical pathway",
+      "value": 1,
+      "label": "informs"
+    },
+    {
+      "source": "core care plan",
+      "target": "healthcare organization",
+      "value": 1,
+      "label": "adopts"
+    },
+    {
+      "source": "healthcare process evaluation",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "evaluates"
+    },
+    {
+      "source": "healthcare activity element",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "healthcare activity element",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare needs assessment",
+      "target": "subject of care desire",
+      "value": 1,
+      "label": "is considered during subject of care desire"
+    },
+    {
+      "source": "healthcare needs assessment",
+      "target": "needed healthcare activity",
+      "value": 1,
+      "label": "identifies"
+    },
+    {
+      "source": "healthcare needs assessment",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare needs assessment",
+      "target": "healthcare planning",
+      "value": 1,
+      "label": "precedes"
+    },
+    {
+      "source": "healthcare needs assessment",
+      "target": "health need",
+      "value": 1,
+      "label": "is considered during"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "person",
+      "value": 1,
+      "label": "is"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "clinical report",
+      "value": 1,
+      "label": "receives"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare",
+      "value": 1,
+      "label": "participates in"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "identifies or states"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "sharable data repository",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "organization",
+      "value": 1,
+      "label": "is organization"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "is assigned to"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "continuity of care",
+      "value": 1,
+      "label": "is involved in"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "health thread",
+      "value": 1,
+      "label": "defines"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare information request",
+      "value": 1,
+      "label": "receives healthcare information request"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "demand for care",
+      "value": 1,
+      "label": "expresses"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "applies"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "clinical report",
+      "value": 1,
+      "label": "sends out"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "observed condition",
+      "value": 1,
+      "label": "has observed"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "makes decisions assisted by"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "potential health condition",
+      "value": 1,
+      "label": "describes"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare funds",
+      "value": 1,
+      "label": "provides"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare activity element",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "certificate related to a healthcare matter",
+      "value": 1,
+      "label": "is issued by"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare information request",
+      "value": 1,
+      "label": "sends out healthcare information request"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "assigns"
+    },
+    {
+      "source": "healthcare actor",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "is responsible for automated healthcare"
+    },
+    {
+      "source": "concept",
+      "target": "deprecated term",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "concept",
+      "target": "synonym",
+      "value": 1,
+      "label": "designates synonym"
+    },
+    {
+      "source": "concept",
+      "target": "knowledge",
+      "value": 1,
+      "label": "is a unit of"
+    },
+    {
+      "source": "concept",
+      "target": "system of concepts",
+      "value": 1,
+      "label": "system of concepts"
+    },
+    {
+      "source": "concept",
+      "target": "term",
+      "value": 1,
+      "label": "designates"
+    },
+    {
+      "source": "information",
+      "target": "continuity of care",
+      "value": 1,
+      "label": "is shared during"
+    },
+    {
+      "source": "attestation information",
+      "target": "structure component",
+      "value": 1,
+      "label": "structure component"
+    },
+    {
+      "source": "attestation information",
+      "target": "electronic health record component",
+      "value": 1,
+      "label": "target"
+    },
+    {
+      "source": "sharable data repository",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "is imported into"
+    },
+    {
+      "source": "sharable data repository",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "is extracted from"
+    },
+    {
+      "source": "sharable data repository",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "medium",
+      "target": "health record",
+      "value": 1,
+      "label": "is stored on"
+    },
+    {
+      "source": "working diagnosis",
+      "target": "observed condition",
+      "value": 1,
+      "label": "is consistent with"
+    },
+    {
+      "source": "working diagnosis",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "has determined"
+    },
+    {
+      "source": "demographic item",
+      "target": "demographic entity",
+      "value": 1,
+      "label": "demographic entity"
+    },
+    {
+      "source": "demographic item",
+      "target": "demographic cluster",
+      "value": 1,
+      "label": "demographic cluster"
+    },
+    {
+      "source": "demographic item",
+      "target": "entry",
+      "value": 1,
+      "label": "entry"
+    },
+    {
+      "source": "demographic extract",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "electronic health record extract"
+    },
+    {
+      "source": "demographic extract",
+      "target": "electronic health record extract",
+      "value": 1,
+      "label": "electronic health record extract electronic health record extract"
+    },
+    {
+      "source": "system of concepts",
+      "target": "concept",
+      "value": 1,
+      "label": "concept"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "self-care activity",
+      "value": 1,
+      "label": "generates self-care activity"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "clinical report",
+      "value": 1,
+      "label": "is received as"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "results in"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "healthcare third party activity",
+      "value": 1,
+      "label": "generates"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "non-ratified healthcare information",
+      "target": "healthcare information for import",
+      "value": 1,
+      "label": "becomes"
+    },
+    {
+      "source": "folder",
+      "target": "folder",
+      "value": 1,
+      "label": "folder folder"
+    },
+    {
+      "source": "folder",
+      "target": "composition",
+      "value": 1,
+      "label": "composition"
+    },
+    {
+      "source": "folder",
+      "target": "folder",
+      "value": 1,
+      "label": "folder"
+    },
+    {
+      "source": "prescribed third party activity",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "is prescribed by"
+    },
+    {
+      "source": "healthcare information for import",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "has ratified"
+    },
+    {
+      "source": "healthcare information for import",
+      "target": "professional health record",
+      "value": 1,
+      "label": "is imported into"
+    },
+    {
+      "source": "healthcare information for import",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "generates"
+    },
+    {
+      "source": "healthcare information for import",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "becomes"
+    },
+    {
+      "source": "clinical process",
+      "target": "clinical process episode",
+      "value": 1,
+      "label": "is time interval for"
+    },
+    {
+      "source": "clinical process",
+      "target": "clinical process interest",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "clinical process",
+      "target": "health issue",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "clinical process",
+      "target": "initial contact",
+      "value": 1,
+      "label": "establishes"
+    },
+    {
+      "source": "clinical process",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "includes"
+    },
+    {
+      "source": "clinical process",
+      "target": "clinical process outcome evaluation",
+      "value": 1,
+      "label": "evaluates outcome of"
+    },
+    {
+      "source": "health condition",
+      "target": "clinical pathway",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "health condition",
+      "target": "clinical pathway",
+      "value": 1,
+      "label": "governs the choice of"
+    },
+    {
+      "source": "health condition",
+      "target": "health condition evolution",
+      "value": 1,
+      "label": "shows the evolution of"
+    },
+    {
+      "source": "clinical process outcome evaluation",
+      "target": "target condition",
+      "value": 1,
+      "label": "is input to"
+    },
+    {
+      "source": "clinical process outcome evaluation",
+      "target": "resultant condition",
+      "value": 1,
+      "label": "is input to resultant condition"
+    },
+    {
+      "source": "clinical process outcome evaluation",
+      "target": "clinical process",
+      "value": 1,
+      "label": "evaluates outcome of"
+    },
+    {
+      "source": "input health state",
+      "target": "health condition evolution",
+      "value": 1,
+      "label": "relates to"
+    },
+    {
+      "source": "input health state",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is input to"
+    },
+    {
+      "source": "health thread",
+      "target": "health concern",
+      "value": 1,
+      "label": "delineates health concern"
+    },
+    {
+      "source": "health thread",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "links healthcare matter"
+    },
+    {
+      "source": "health thread",
+      "target": "episodes of care bundle",
+      "value": 1,
+      "label": "delineates"
+    },
+    {
+      "source": "health thread",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "defines"
+    },
+    {
+      "source": "health thread",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "health thread",
+      "target": "continuity facilitator mandate",
+      "value": 1,
+      "label": "has topic"
+    },
+    {
+      "source": "health thread",
+      "target": "health thread",
+      "value": 1,
+      "label": "links"
+    },
+    {
+      "source": "health thread",
+      "target": "health thread",
+      "value": 1,
+      "label": "links health thread"
+    },
+    {
+      "source": "data value",
+      "target": "element",
+      "value": 1,
+      "label": "element"
+    },
+    {
+      "source": "data value",
+      "target": "demographic element",
+      "value": 1,
+      "label": "demographic element"
+    },
+    {
+      "source": "healthcare resource",
+      "target": "healthcare funds",
+      "value": 1,
+      "label": "is funding"
+    },
+    {
+      "source": "healthcare resource",
+      "target": "healthcare resource management",
+      "value": 1,
+      "label": "direct and control  the supply and use of"
+    },
+    {
+      "source": "healthcare resource",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "sharable data repository",
+      "value": 1,
+      "label": "is extracted from"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "electronic health record component",
+      "value": 1,
+      "label": "electronic health record component"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "demographic extract",
+      "value": 1,
+      "label": "demographic extract"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "extracted component set",
+      "value": 1,
+      "label": "extracted component set"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "sharable data repository",
+      "value": 1,
+      "label": "is imported into"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "demographic extract",
+      "value": 1,
+      "label": "demographic extract demographic extract"
+    },
+    {
+      "source": "electronic health record extract",
+      "target": "extracted component set",
+      "value": 1,
+      "label": "extracted component set extracted component set"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "reviewed during"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "initiated during"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "results in"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "automatic medical device",
+      "value": 1,
+      "label": "delivers"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "automated healthcare",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "terminated during"
+    },
+    {
+      "source": "contact period",
+      "target": "contact",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "base component",
+      "target": "audit information",
+      "value": 1,
+      "label": "audit information"
+    },
+    {
+      "source": "base component",
+      "target": "link",
+      "value": 1,
+      "label": "target"
+    },
+    {
+      "source": "base component",
+      "target": "link",
+      "value": 1,
+      "label": "source"
+    },
+    {
+      "source": "individual care plan",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan"
+    },
+    {
+      "source": "individual care plan",
+      "target": "health issue",
+      "value": 1,
+      "label": "addresses health issue"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is planned in"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare appointment",
+      "value": 1,
+      "label": "is scheduled in"
+    },
+    {
+      "source": "individual care plan",
+      "target": "health objective",
+      "value": 1,
+      "label": "targets health objective"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "applies"
+    },
+    {
+      "source": "individual care plan",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare activity management",
+      "value": 1,
+      "label": "changes statuses of  healthcare activities in"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare planning",
+      "value": 1,
+      "label": "is result of"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "targets"
+    },
+    {
+      "source": "individual care plan",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "complies with"
+    },
+    {
+      "source": "individual care plan",
+      "target": "protocol",
+      "value": 1,
+      "label": "implements"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "individual care plan",
+      "target": "health thread",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "individual care plan",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan care plan"
+    },
+    {
+      "source": "individual care plan",
+      "target": "core care plan",
+      "value": 1,
+      "label": "is based upon"
+    },
+    {
+      "source": "individual care plan",
+      "target": "healthcare activities bundle",
+      "value": 1,
+      "label": "healthcare activities bundle"
+    },
+    {
+      "source": "health condition period",
+      "target": "observed condition",
+      "value": 1,
+      "label": "has been observed during"
+    },
+    {
+      "source": "healthcare third party",
+      "target": "healthcare third party activity",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare third party",
+      "target": "subject of care",
+      "value": 1,
+      "label": "supports"
+    },
+    {
+      "source": "demographic folder",
+      "target": "demographic folder",
+      "value": 1,
+      "label": "demographic folder"
+    },
+    {
+      "source": "demographic folder",
+      "target": "demographic folder",
+      "value": 1,
+      "label": "demographic folder demographic folder"
+    },
+    {
+      "source": "demographic folder",
+      "target": "demographic entity",
+      "value": 1,
+      "label": "demographic entity"
+    },
+    {
+      "source": "prescribed self-care",
+      "target": "self-care period",
+      "value": 1,
+      "label": "takes place during"
+    },
+    {
+      "source": "prescribed self-care",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "is prescribed by"
+    },
+    {
+      "source": "healthcare administration",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is supporting"
+    },
+    {
+      "source": "summarized healthcare information repository",
+      "target": "electronic patient summary",
+      "value": 1,
+      "label": "electronic patient summary"
+    },
+    {
+      "source": "professionally assessed condition",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "is identified by"
+    },
+    {
+      "source": "professionally assessed condition",
+      "target": "prognostic condition",
+      "value": 1,
+      "label": "is based on"
+    },
+    {
+      "source": "demographic cluster",
+      "target": "demographic item",
+      "value": 1,
+      "label": "demographic item"
+    },
+    {
+      "source": "professional health record",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "is documented in"
+    },
+    {
+      "source": "professional health record",
+      "target": "healthcare information for import",
+      "value": 1,
+      "label": "is imported into"
+    },
+    {
+      "source": "professional health record",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "professional health record",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "is responsible for"
+    },
+    {
+      "source": "adverse event",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "adverse event",
+      "target": "adverse event management",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "concerns healthcare mandate"
+    },
+    {
+      "source": "subject of care",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "has the right to take decisions on behalf of"
+    },
+    {
+      "source": "subject of care",
+      "target": "subject of care preference delay",
+      "value": 1,
+      "label": "is caused by"
+    },
+    {
+      "source": "subject of care",
+      "target": "subject of care desire",
+      "value": 1,
+      "label": "expresses"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare",
+      "value": 1,
+      "label": "seeks to receive, is receiving, or has received"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "is performed for healthcare process"
+    },
+    {
+      "source": "subject of care",
+      "target": "consent competence",
+      "value": 1,
+      "label": "has consent competence"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "is performed for"
+    },
+    {
+      "source": "subject of care",
+      "target": "contact",
+      "value": 1,
+      "label": "participates in"
+    },
+    {
+      "source": "subject of care",
+      "target": "informed consent",
+      "value": 1,
+      "label": "gives"
+    },
+    {
+      "source": "subject of care",
+      "target": "reason for demand for care",
+      "value": 1,
+      "label": "is expressed by"
+    },
+    {
+      "source": "subject of care",
+      "target": "health state",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "subject of care",
+      "target": "health need",
+      "value": 1,
+      "label": "has or has had"
+    },
+    {
+      "source": "subject of care",
+      "target": "health record",
+      "value": 1,
+      "label": "concerns health record"
+    },
+    {
+      "source": "subject of care",
+      "target": "personal health record",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "subject of care",
+      "target": "healthcare third party",
+      "value": 1,
+      "label": "supports"
+    },
+    {
+      "source": "subject of care",
+      "target": "next of kin",
+      "value": 1,
+      "label": "has next of kin"
+    },
+    {
+      "source": "subject of care",
+      "target": "self-care activity",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "subject of care",
+      "target": "objection",
+      "value": 1,
+      "label": "states"
+    },
+    {
+      "source": "prognostic condition",
+      "target": "healthcare professional",
+      "value": 1,
+      "label": "identifies"
+    },
+    {
+      "source": "prognostic condition",
+      "target": "professionally assessed condition",
+      "value": 1,
+      "label": "is based on"
+    },
+    {
+      "source": "content",
+      "target": "composition",
+      "value": 1,
+      "label": "composition"
+    },
+    {
+      "source": "content",
+      "target": "section",
+      "value": 1,
+      "label": "section"
+    },
+    {
+      "source": "health record extract",
+      "target": "mandate to export personal information",
+      "value": 1,
+      "label": "implies the right  to communicate"
+    },
+    {
+      "source": "health record extract",
+      "target": "health record",
+      "value": 1,
+      "label": "is extracted from"
+    },
+    {
+      "source": "health record extract",
+      "target": "healthcare matter",
+      "value": 1,
+      "label": "is used as label for"
+    },
+    {
+      "source": "health record extract",
+      "target": "health record component",
+      "value": 1,
+      "label": "health record component"
+    },
+    {
+      "source": "health record extract",
+      "target": "healthcare information request",
+      "value": 1,
+      "label": "is topic for"
+    },
+    {
+      "source": "healthcare third party activity",
+      "target": "healthcare activity mandate",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare third party activity",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "generates"
+    },
+    {
+      "source": "healthcare third party activity",
+      "target": "healthcare third party",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare activity period element",
+      "target": "health issue",
+      "value": 1,
+      "label": "determines"
+    },
+    {
+      "source": "healthcare activity period element",
+      "target": "episode of care",
+      "value": 1,
+      "label": "episode of care"
+    },
+    {
+      "source": "healthcare activity period element",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "healthcare activity period"
+    },
+    {
+      "source": "potential health condition",
+      "target": "health state",
+      "value": 1,
+      "label": "represents potential aspects of"
+    },
+    {
+      "source": "potential health condition",
+      "target": "healthcare actor",
+      "value": 1,
+      "label": "describes"
+    },
+    {
+      "source": "healthcare planning",
+      "target": "clinical guideline",
+      "value": 1,
+      "label": "is based upon"
+    },
+    {
+      "source": "healthcare planning",
+      "target": "healthcare needs assessment",
+      "value": 1,
+      "label": "precedes"
+    },
+    {
+      "source": "healthcare planning",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "is result of"
+    },
+    {
+      "source": "healthcare planning",
+      "target": "healthcare activity management",
+      "value": 1,
+      "label": "healthcare activity management"
+    },
+    {
+      "source": "healthcare activity directory",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "includes"
+    },
+    {
+      "source": "healthcare activity directory",
+      "target": "healthcare provider",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "healthcare treatment",
+      "target": "health state",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "healthcare quality management",
+      "target": "healthcare organization",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare quality management",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "provides feedback to"
+    },
+    {
+      "source": "healthcare quality management",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "controls quality of"
+    },
+    {
+      "source": "health state",
+      "target": "subject of care",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "health state",
+      "target": "healthcare treatment",
+      "value": 1,
+      "label": "influences"
+    },
+    {
+      "source": "health state",
+      "target": "potential health condition",
+      "value": 1,
+      "label": "represents potential aspects of"
+    },
+    {
+      "source": "health state",
+      "target": "health need",
+      "value": 1,
+      "label": "is  deficit in"
+    },
+    {
+      "source": "health state",
+      "target": "healthcare investigation",
+      "value": 1,
+      "label": "clarifies"
+    },
+    {
+      "source": "health state",
+      "target": "observed condition",
+      "value": 1,
+      "label": "is observed as"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "excluded condition",
+      "value": 1,
+      "label": "has ruled out"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "manages healthcare activity period"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "healthcare professional entitlement",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "healthcare needs assessment",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "professionally assessed condition",
+      "value": 1,
+      "label": "is identified by"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "prescribed self-care",
+      "value": 1,
+      "label": "is prescribed by prescribed self-care"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "professional health record",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "prescribed third party activity",
+      "value": 1,
+      "label": "is prescribed by"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "referral",
+      "value": 1,
+      "label": "issues"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "prognostic condition",
+      "value": 1,
+      "label": "identifies"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "request",
+      "value": 1,
+      "label": "issues request"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "healthcare information for import",
+      "value": 1,
+      "label": "has ratified"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "working diagnosis",
+      "value": 1,
+      "label": "has determined"
+    },
+    {
+      "source": "healthcare professional",
+      "target": "demand for care",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "term",
+      "target": "synonym",
+      "value": 1,
+      "label": "has"
+    },
+    {
+      "source": "term",
+      "target": "concept",
+      "value": 1,
+      "label": "designates"
+    },
+    {
+      "source": "adverse event management",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "adverse event management",
+      "target": "adverse event",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "reason for demand for care",
+      "target": "demand for care",
+      "value": 1,
+      "label": "motivates"
+    },
+    {
+      "source": "reason for demand for care",
+      "target": "health need",
+      "value": 1,
+      "label": "is background for"
+    },
+    {
+      "source": "reason for demand for care",
+      "target": "subject of care",
+      "value": 1,
+      "label": "is expressed by subject of care"
+    },
+    {
+      "source": "reason for demand for care",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "is expressed by"
+    },
+    {
+      "source": "discharge report",
+      "target": "mandated period of care",
+      "value": 1,
+      "label": "concerns"
+    },
+    {
+      "source": "healthcare documenting",
+      "target": "health record",
+      "value": 1,
+      "label": "maintains"
+    },
+    {
+      "source": "healthcare activity management",
+      "target": "healthcare planning",
+      "value": 1,
+      "label": "healthcare planning"
+    },
+    {
+      "source": "healthcare activity management",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "healthcare activity management",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "changes statuses of  healthcare activities in"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity healthcare activity"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "is performed during"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activity management",
+      "value": 1,
+      "label": "manages"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "adverse event management",
+      "value": 1,
+      "label": "adverse event management"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare commitment",
+      "value": 1,
+      "label": "relates to the provision of"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "targets"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "reviewed during"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare resource management",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare evaluation",
+      "value": 1,
+      "label": "evaluates aspects of"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "healthcare activity"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activity element",
+      "value": 1,
+      "label": "healthcare activity element"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare activities bundle",
+      "value": 1,
+      "label": "healthcare activities bundle"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "terminated during"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare process",
+      "value": 1,
+      "label": "healthcare process"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "health record",
+      "value": 1,
+      "label": "is accessed during"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "subject of care",
+      "value": 1,
+      "label": "is performed for"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "automated healthcare",
+      "value": 1,
+      "label": "initiated during"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "care plan"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "health record",
+      "value": 1,
+      "label": "is recorded in"
+    },
+    {
+      "source": "healthcare activity",
+      "target": "healthcare resource",
+      "value": 1,
+      "label": "requires healthcare resource"
+    },
+    {
+      "source": "resultant condition",
+      "target": "output health state",
+      "value": 1,
+      "label": "is observed as"
+    },
+    {
+      "source": "resultant condition",
+      "target": "clinical process outcome evaluation",
+      "value": 1,
+      "label": "is input to"
+    },
+    {
+      "source": "healthcare activity mandate",
+      "target": "healthcare provider activity",
+      "value": 1,
+      "label": "requires healthcare provider activity"
+    },
+    {
+      "source": "healthcare activity mandate",
+      "target": "healthcare third party activity",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "healthcare evaluation",
+      "target": "healthcare activity",
+      "value": 1,
+      "label": "evaluates aspects of"
+    },
+    {
+      "source": "clinical process episode",
+      "target": "healthcare activity period",
+      "value": 1,
+      "label": "healthcare activity period"
+    },
+    {
+      "source": "clinical process episode",
+      "target": "clinical process",
+      "value": 1,
+      "label": "is time interval for"
+    },
+    {
+      "source": "informed consent",
+      "target": "subject of care",
+      "value": 1,
+      "label": "gives"
+    },
+    {
+      "source": "informed consent",
+      "target": "consent competence",
+      "value": 1,
+      "label": "requires consent competence"
+    },
+    {
+      "source": "informed consent",
+      "target": "healthcare mandate",
+      "value": 1,
+      "label": "requires"
+    },
+    {
+      "source": "informed consent",
+      "target": "subject of care proxy",
+      "value": 1,
+      "label": "gives subject of care proxy"
+    },
+    {
+      "source": "subject of care preference delay",
+      "target": "subject of care",
+      "value": 1,
+      "label": "is caused by"
+    },
+    {
+      "source": "self-care activity",
+      "target": "subject of care",
+      "value": 1,
+      "label": "performs"
+    },
+    {
+      "source": "self-care activity",
+      "target": "non-ratified healthcare information",
+      "value": 1,
+      "label": "generates"
+    },
+    {
+      "source": "health objective",
+      "target": "individual care plan",
+      "value": 1,
+      "label": "targets"
+    },
+    {
+      "source": "health objective",
+      "target": "healthcare goal",
+      "value": 1,
+      "label": "contributes to achievement of"
+    },
+    {
+      "source": "health objective",
+      "target": "health need",
+      "value": 1,
+      "label": "addresses"
+    },
+    {
+      "source": "health objective",
+      "target": "target condition",
+      "value": 1,
+      "label": "represents"
+    }
+  ]
+}

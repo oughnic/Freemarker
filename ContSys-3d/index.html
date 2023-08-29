@@ -1,34 +1,3 @@
-<#ftl output_format="HTML">
-<#-- Print the metadata value for a catalogueItem filtered by namespace and key, escape double quotes and trim any whitespace -->
-<#-- Input parameters                                                                                                         -->
-<#--     catalogueItem - generic Mauro Catalogue Item with metadata                                                           -->
-<#--     metaNamespace - Namespace of the metadata profile                                                                    -->
-<#--     metaKey - The key identifying the parameter to retrieve                                                              -->
-
-<#macro printMetadata catalogueItem, metaNamespace, metaKey >
-<#list catalogueItem.metadata?filter(p -> p.key == metaKey && p.namespace == metaNamespace) as meta>${meta.value?replace("\"","\\\"")?trim}</#list></#macro>
-
-<#macro termSubsection1 class >
-<#assign termClause >
-<@printMetadata class, "directives.org.iso", "termClause" />
-</#assign>
-<#if termClause?markup_string?split(".")?size gt 2 >
-${(termClause?markup_string?split("."))[1]}<#else>
-0</#if>
-</#macro>
-<#macro relatedClasses dataClass>
-<#if dataClass.dataElements??>
-<#list dataClass.dataElements?filter(p -> p.dataType.domainType == "ReferenceType") as dataElement >
-        {
-            "source": "${dataClass.label}",
-            "target": "${dataElement.dataType.referenceClass.label}",
-            "value": 1,
-            "label": "${dataElement.label}"
-        }<#sep>,
-         </#sep>
-</#list>
-</#if>
-</#macro>
 <head>
     <style>
         body {
@@ -42,28 +11,7 @@ ${(termClause?markup_string?split("."))[1]}<#else>
     <script src="https://unpkg.com/3d-force-graph"></script>
     <!--<script src="../../dist/3d-force-graph.js"></script>-->
 
-    <script type="application/json" id="3d-contsys">
-
-{
-    "nodes": [
-<#list dataModel.dataClasses as class >
-        {
-            "id": "${class.label}",
-            "childLinks": [],
-            "collapsed": <#if class.label == "health">false<#else>true</#if>,
-            "group": <@termSubsection1 class />        }<#sep>,</#sep>
-</#list>
-       ],
-    "links": [
-<#list dataModel.dataClasses as class >
-    <#if class.dataElements?filter(p -> p.dataType.domainType == "ReferenceType")?size gt 0 >
-     <@relatedClasses class /><#sep>,</#sep>
-</#if>
-</#list>
-    ]
-}
-    </script>
-</script>
+    <!-- The data describing the data model -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
        <style>
@@ -78,14 +26,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>$(function () {
-            var availableTags = [];
-            const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
-            contSysData.nodes.forEach(n => availableTags.push(n.id));
-            $("#tags").autocomplete({
-                source: availableTags
-            });
-        });</script>
 </head>
 
 <body>
@@ -118,7 +58,95 @@ ${(termClause?markup_string?split("."))[1]}<#else>
         </div>
     </footer>
     <script>
-        const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
+
+        var nodes = [];
+        var links = [];
+        var contSysData = { nodes, links };
+        let gData = {
+            nodes: [],
+            links: []
+        };
+
+        // link parent/children
+        var nodesById; 
+
+        fetch('https://oughnic.github.io/3d-contsys.json')
+            .then(response => response.json())
+            .then(data => {
+                contSysData = data;
+                console.log(contSysData);
+                nodesById= Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
+                
+                contSysData.links.forEach(link => {
+                    nodesById[link.source].childLinks.push(link);
+                });
+
+
+                gData = getPrunedTree();
+                console.log(gData);
+
+                const Graph = ForceGraph3D()
+                    (document.getElementById('3d-graph'))
+                    .nodeAutoColorBy('group')
+                    .width(window.clientWidth).height(window.innerHeight - outerHeight(hdr) - outerHeight(ftr))
+                    .onNodeDragEnd(node => {
+                        node.fx = node.x;
+                        node.fy = node.y;
+                        node.fz = node.z;
+                    })
+                    .onNodeClick(node => {
+                        if (node.childLinks.length) {
+                            // node.collapsed = !node.collapsed; // toggle collapse state
+                            rootId = node.id;
+                            gData = getPrunedTree();
+                            Graph.graphData(gData);
+                        }
+                    })
+                    .onNodeRightClick(node => {
+                        rootId = node.id;
+                        gData.nodes = [];
+                        gData.links = [];
+                        gData = getPrunedTree();
+                        Graph.graphData(gData);
+                    })
+                    .linkOpacity(0.7)
+                    .linkWidth(1)
+                    .linkThreeObjectExtend(true)
+                    .linkThreeObject(link => {
+                        // extend link with text sprite
+                        const sprite = new SpriteText(`${link.label}`);
+                        sprite.color = 'white';
+                        sprite.textHeight = 2;
+                        return sprite;
+                    })
+                    .linkPositionUpdate((sprite, { start, end }) => {
+                        const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
+                            [c]: start[c] + (end[c] - start[c]) / 3 // calc third point
+                        })));
+
+                        // Position sprite
+                        Object.assign(sprite.position, middlePos);
+                    })
+                    .nodeThreeObject(node => {
+                        const sprite = new SpriteText(node.label.split(" ").join("\n"));
+                        sprite.material.depthWrite = true;
+                        sprite.color = node.color;
+                        sprite.textHeight = 4;
+                        return sprite;
+                    })
+                    .graphData(gData);
+
+                // Spread nodes a little wider
+                Graph.d3Force('charge').strength(-120);
+
+            }); 
+        console.log(contSysData);
+
+        var availableTags = [];
+        contSysData.nodes.forEach(n => availableTags.push(n.id));
+        $("#tags").autocomplete({
+            source: availableTags
+        });
         var rootId = 'health record';
 
 
@@ -136,21 +164,12 @@ ${(termClause?markup_string?split("."))[1]}<#else>
                 .reduce((total, side) => total + side, height)
         }
 
-        // link parent/children
-        const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
-        contSysData.links.forEach(link => {
-            nodesById[link.source].childLinks.push(link);
-        });
+       
 
-        // Test for doit - to be deleted
         document.getElementById('doit').addEventListener("click", function (e) {
             changeFocus(document.getElementById('tags').value);
         });
 
-        let gData = {
-            nodes: [],
-            links: []
-        };
 
         // change focus of the diagram, resetting it and resetting the root concept
         function changeFocus(root) {
@@ -215,62 +234,6 @@ ${(termClause?markup_string?split("."))[1]}<#else>
         };
 
 
-        gData = getPrunedTree();
-        console.log(gData);
-
-        const Graph = ForceGraph3D()
-            (document.getElementById('3d-graph'))
-            .nodeAutoColorBy('group')
-            .width(window.clientWidth).height(window.innerHeight - outerHeight(hdr) - outerHeight(ftr))
-            .onNodeDragEnd(node => {
-                node.fx = node.x;
-                node.fy = node.y;
-                node.fz = node.z;
-            })
-            .onNodeClick(node => {
-                if (node.childLinks.length) {
-                    // node.collapsed = !node.collapsed; // toggle collapse state
-                    rootId = node.id;
-                    gData = getPrunedTree();
-                    Graph.graphData(gData);
-                }
-            })
-            .onNodeRightClick(node => {
-                rootId = node.id;
-                gData.nodes = [];
-                gData.links = [];
-                gData = getPrunedTree();
-                Graph.graphData(gData);
-            })
-            .linkOpacity(0.7)
-            .linkWidth(1)
-            .linkThreeObjectExtend(true)
-            .linkThreeObject(link => {
-                // extend link with text sprite
-                const sprite = new SpriteText(`$\{link.label}`);
-                sprite.color = 'white';
-                sprite.textHeight = 4;
-                return sprite;
-            })
-            .linkPositionUpdate((sprite, { start, end }) => {
-                const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
-                    [c]: start[c] + (end[c] - start[c]) / 3 // calc third point
-                })));
-
-                // Position sprite
-                Object.assign(sprite.position, middlePos);
-            })
-            .nodeThreeObject(node => {
-                const sprite = new SpriteText(node.id.split(" ").join("\n"));
-                sprite.material.depthWrite = true;
-                sprite.color = node.color;
-                sprite.textHeight = 4;
-                return sprite;
-            })
-            .graphData(gData);
-
-        // Spread nodes a little wider
-        Graph.d3Force('charge').strength(-120);
 
         function updateHighlight() {
             // trigger update of highlighted objects in scene

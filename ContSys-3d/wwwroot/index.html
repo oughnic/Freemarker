@@ -5025,13 +5025,32 @@
                                                     "target": "subject of care",
                                                     "value": 1,
                                                     "label": "is caused by"
-                                                }
+                                               }
                                             ]
                                         }
     </script>
-    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/site.css" asp-append-version="true" />
-  
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+       <style>
+             .ui-autocomplete {
+                 max-height: 400px;
+                 overflow-y: auto;
+                 /* prevent horizontal scrollbar */
+                 overflow-x: hidden;
+                 background-color: lightgrey;
+             }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>$(function () {
+            var availableTags = [];
+            const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
+            contSysData.nodes.forEach(n => availableTags.push(n.id));
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });</script>
 </head>
 
 <body>
@@ -5040,28 +5059,21 @@
     <header  id="hdr">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container" >
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Three dimensional view of a system of concepts for the continuity of care</a>
-                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>-->
-            </div>
+                <a class="navbar-brand" asp-area="" href="index.html">Three dimensional view of a system of concepts for the continuity of care</a>
+                     
+                    <form class="d-flex">
+                        <div class="input-group">
+                            <input id="tags" type="search" class="form-control" placeholder="Pick a concept">
+                            <button class="btn btn-outline-secondary" type="button" id="doit">Go</button>
+                        </div>
+                    </form>
+                    
+              </div>
         </nav>
     </header>
     <div>
         <main role="main" class="d-flex flex-column flex-grow" >
             <div id="3d-graph">
-
             </div>
         </main>
     </div>
@@ -5073,16 +5085,13 @@
     <script>
         const contSysData = JSON.parse(document.getElementById('3d-contsys').innerHTML);
         var rootId = 'health record';
-       
+
+
+        // Setting the header and footer elements so that the canvas size can be calculated
         var hdr = document.getElementById('hdr');
         var ftr = document.getElementById('ftr');
-        console.log('Header height: ' + hdr.clientHeight + '; footer height: ' + ftr.clientHeight);
-        // link parent/children
-        const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
-        contSysData.links.forEach(link => {
-            nodesById[link.source].childLinks.push(link);
-        });
 
+        // find out the full height of a document element
         function outerHeight(element) {
             const height = element.offsetHeight,
                 style = window.getComputedStyle(element)
@@ -5092,10 +5101,30 @@
                 .reduce((total, side) => total + side, height)
         }
 
+        // link parent/children
+        const nodesById = Object.fromEntries(contSysData.nodes.map(node => [node.id, node]));
+        contSysData.links.forEach(link => {
+            nodesById[link.source].childLinks.push(link);
+        });
+
+        // Test for doit - to be deleted
+        document.getElementById('doit').addEventListener("click", function (e) {
+            changeFocus(document.getElementById('tags').value);
+        });
+
         let gData = {
             nodes: [],
             links: []
         };
+
+        // change focus of the diagram, resetting it and resetting the root concept
+        function changeFocus(root) {
+            rootId = root;
+            gData.nodes = [];
+            gData.links = [];
+            gData = getPrunedTree();
+            Graph.graphData(gData);
+        }
 
         const getPrunedTree = () => {
             const visibleNodes = [];
